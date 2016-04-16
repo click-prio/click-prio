@@ -46,6 +46,12 @@
             animation: material .85s ease-out both;
         }
     }
+    &[disabled]{
+        opacity: .5;
+        &:before {
+            display: none;
+        }
+    }
 
     &.get-start--primary {
         background-color: #597b77;
