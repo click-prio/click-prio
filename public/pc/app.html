@@ -85,81 +85,75 @@
 
 <main class="l-main" ng-controller="myController as myCtrl">
 	<form class="form" id="js-form-slider" action="#" novalidate>
-        <div class="section-dr">
-            <ul class="section-dr__list">
-                <li class="section-dr__item">
-                    <dl class="avatar">
-                        <dt class="avatar__thumb">
-                            <img src="images/dr-generalist.png" alt="">
-                        </dt>
-                        <dd class="avatar__name">
-                            <label class="radio">
-                                <input class="radio__input" type="radio" name="doctor" value="general" ng-model="checkedSp">
-                                <span class="radio__box">
-                                    <i class="radio__icon fa fa-check"></i>
-                                </span>
-                                <span class="radio__text">General Physician</span>
-                            </label>
-                        </dd>
-                    </dl>
-                </li>
-                <li class="section-dr__item">
-                    <dl class="avatar">
-                        <dt class="avatar__thumb">
-                            <img src="images/dr-specialist.png" alt="">
-                        </dt>
-                        <dd class="avatar__name">
-                            <label class="radio">
-                                <input class="radio__input" type="radio" name="doctor" value="specialist" ng-model="checkedSp">
-                                <span class="radio__box">
-                                    <i class="radio__icon fa fa-check"></i>
-                                </span>
-                                <span class="radio__text">Specialist</span>
-                            </label>
-                        </dd>
-                    </dl>
-                </li>
-            </ul>
-            <div class="section-dr__select check-element animate-show" ng-show="checkedSp === 'specialist'">
-                <div class="select">
-                    <i class="select__icon fa fa-angle-down"></i>
-                    <select class="select__object">
-                        <option ng-repeat="specialtiy in myCtrl.specialties" value="{{specialtiy.value}}">{{specialtiy.name}}</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+        
 		<ul class="form__inner">
     		<li class="form__item">
-    <dl>
-        <dt>Select your specialist</dt>
-        <dd>
-            <div class="button-group">
-                <input class="button-group__input input" placeholder="Seach doctors" ng-model="searchText" />
-                <ul class="button-group__list">
-                    <li ng-repeat="specialist in myCtrl.specialists | filter:searchText">
-                        <button class="button" type="button" value="{{specialist.name}}" ng-click="myCtrl.selectDr($event)">{{specialist.name}}</button>
-                    </li>
-                </ul>
-            </div>
-        </dd>
-    </dl>
-</li>
-    		<li class="form__item">
-    <dl>
-        <dt>Select your specialist</dt>
-        <dd>
-            <div class="button-group">
-                <input class="button-group__input input" placeholder="Seach doctors" ng-model="searchText" />
-                <ul class="button-group__list">
-                    <li ng-repeat="doctor in myCtrl.doctors | filter:searchText">
-                        <button class="button" type="button" value="{{doctor.name}}" ng-click="myCtrl.selectDr($event)">{{doctor.name}}</button>
-                    </li>
-                </ul>
-            </div>
-        </dd>
-    </dl>
-</li>
+                <div class="section-dr">
+    <ul class="section-dr__list">
+        <li class="section-dr__item">
+            <dl class="avatar">
+                <dt class="avatar__thumb">
+                    <img src="images/dr-generalist.png" alt="">
+                </dt>
+                <dd class="avatar__name">
+                    <label class="dot">
+                        <input class="dot__input" type="radio" name="doctor" value="general" ng-model="checkedSp">
+                        <span class="dot__box">
+                            <i class="dot__icon fa fa-check"></i>
+                        </span>
+                        <span class="dot__text">General Physician</span>
+                    </label>
+                </dd>
+            </dl>
+        </li>
+        <li class="section-dr__item">
+            <dl class="avatar">
+                <dt class="avatar__thumb">
+                    <img src="images/dr-specialist.png" alt="">
+                </dt>
+                <dd class="avatar__name">
+                    <label class="dot">
+                        <input class="dot__input" type="radio" name="doctor" value="specialist" ng-model="checkedSp">
+                        <span class="dot__box">
+                            <i class="dot__icon fa fa-check"></i>
+                        </span>
+                        <span class="dot__text">Specialist</span>
+                    </label>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+    <div class="section-dr__select check-element animate-show" ng-show="checkedSp === 'specialist'">
+        <div class="select">
+            <i class="select__icon fa fa-angle-down"></i>
+            <select class="select__object">
+                <option ng-repeat="specialtiy in myCtrl.specialties" value="{{specialtiy.value}}">{{specialtiy.name}}</option>
+            </select>
+        </div>
+    </div>
+</div>      
+            </li>
+            <li class="form__item">
+                <div class="section-concerns">
+    <ul class="section-concerns__list">
+        <li class="section-concerns__item">
+            <textarea class="textarea" name="" id="" cols="20" rows="5" placeholder="Concerns"></textarea>
+        </li>
+        <li class="section-concerns__item">
+            <label class="dot dot--box">
+                <input class="dot__input" type="checkbox" name="doctor" value="else">
+                <span class="dot__box">
+                    <i class="dot__icon fa fa-check"></i>
+                </span>
+                <span class="dot__text">I’m filing in behalf of someone else</span>
+            </label>
+        </li>
+        <li class="section-concerns__item">
+            <input class="input" type="text" placeholder="Patient’s Name">
+        </li>
+    </ul>
+</div>  
+            </li>
     	</ul>
     </form>
 </main>
