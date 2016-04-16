@@ -1,6 +1,8 @@
 .form {
     width: 100%;
     overflow: hidden;
+    background: url(#{$path-image}bg-form.jpg) left top no-repeat;
+    background-size: cover;
     .form__inner {
         position: relative;
         overflow: hidden;
@@ -24,6 +26,16 @@
                 font-size: 25px;
             }
         }
+        &.form__item--type-c {
+            .form__cell {
+                &:nth-child(1) {
+                    background-color: #7c7c7c;
+                }
+                &:nth-child(2) {
+                    background-color: #46552e;
+                }
+            }
+        }
     }
     .form__cell {
         display: table-cell;
@@ -34,6 +46,23 @@
         }
         &:nth-child(2) {
             width: 55%;
+            background-color: #abd373;
+        }
+    }
+}
+
+@include query($break-medium) {
+    .form__item {
+        display: block;
+    }
+    .form__cell {
+        display: block;
+
+        &:nth-child(1) {
+            display: none;
+        }
+        &:nth-child(2) {
+            width: 100%;
         }
     }
 }
