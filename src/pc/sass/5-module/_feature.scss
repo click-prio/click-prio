@@ -1,0 +1,45 @@
+.feature {
+    background: url(#{$path-image}bg-feature.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 25px 15px;
+    .feature__title {
+        font-size: 50px;
+        line-height: 1.35;
+        margin-bottom: 50px;
+        color: #fff;
+        text-align: center;
+    }
+    .feature__grid {
+    }
+    .feature__grid-inner {
+        margin: -30px 0;
+    }
+    .feature__grid-item {
+        padding: 30px;
+    }
+    .feature__strong {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 35px;
+        color: #fff;
+    }
+}
+
+@include query($break-medium) {
+    .feature {
+        .feature__title {
+            font-size: 25px;
+        }
+        .feature__grid-inner {
+            margin: -15px;
+        }
+        .feature__grid-item {
+            padding: 15px;
+        }
+        .feature__strong {
+            margin-top: 100px;
+            font-size: 18px;
+            padding: 0 20px;
+        }
+    }
+}

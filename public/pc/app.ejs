@@ -1,0 +1,32 @@
+<% var
+    id = "app",
+    title = "",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "blog";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+<!--l-main ここから-->
+
+<main class="l-main" ng-controller="myController as myCtrl">
+	<form class="form" id="js-form-slider" action="#" novalidate>
+        
+		<ul class="form__inner">
+    		<li class="form__item">
+                <% include module/_selection-dr %>      
+            </li>
+            <li class="form__item">
+                <% include module/_selection-concerns %>  
+            </li>
+            <li class="form__item">
+                <% include module/_selection-button %>  
+            </li>
+    	</ul>
+    </form>
+</main>
+<!--l-main ここまで-->
+
+
+<% include layout/_script %>

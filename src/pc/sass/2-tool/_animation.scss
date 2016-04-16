@@ -31,6 +31,23 @@
     }
 }
 
+.js-section {
+    > * {
+        backface-visibility: hidden;
+        transition-property: opacity, transform;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+    }
+    &.is-active {
+        > * {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
 .animate-show {
     opacity: 1;
     animation: fadeInUp .25s ease-in-out;

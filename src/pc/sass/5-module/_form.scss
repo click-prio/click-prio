@@ -1,0 +1,39 @@
+.form {
+    width: 100%;
+    overflow: hidden;
+    .form__inner {
+        position: relative;
+        overflow: hidden;
+        transition: transform .35s ease-in-out;
+    }
+    .form__item {
+        display: table;
+
+        &.form__item--type-b {
+            .form__cell {
+                &:nth-child(1) {
+                    vertical-align: bottom;
+                    background-color: rgba(#000, .7);
+                }
+                &:nth-child(2) {
+                    background-color: #789350;
+                }
+            }
+            .form__item--type-b-text {
+                color: #fff;
+                font-size: 25px;
+            }
+        }
+    }
+    .form__cell {
+        display: table-cell;
+        padding: 20px 5%;
+
+        &:nth-child(1) {
+            width: 45%;
+        }
+        &:nth-child(2) {
+            width: 55%;
+        }
+    }
+}

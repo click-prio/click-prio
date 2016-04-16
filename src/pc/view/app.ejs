@@ -15,10 +15,24 @@
         
 		<ul class="form__inner">
     		<li class="form__item">
-                <% include module/_section-dr %>      
+                <div class="form__cell"></div>
+                <div class="form__cell">
+                    <% include module/_selection--dr %>      
+                </div>
+            </li>
+            <li class="form__item form__item--type-b">
+                <div class="form__cell">
+                    <p class="form__item--type-b__text">
+                        select notification style:
+                    </p>
+                </div>
+                <div class="form__cell">
+                    <% include module/_selection--concerns %>  
+                </div>
             </li>
             <li class="form__item">
-                <% include module/_section-concerns %>  
+                <div class="form__cell"></div>
+                <% include module/_selection--button %>  
             </li>
     	</ul>
     </form>

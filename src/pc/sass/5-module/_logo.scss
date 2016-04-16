@@ -1,0 +1,25 @@
+.logo {
+    background-size: cover;
+    text-align: center;
+    .logo__image {
+        margin-bottom: 10px;
+    }
+    .logo__title {
+        color: #6c85ae;
+        font-size: 35px;
+        line-height: 1.35;
+    }
+}
+
+@include query($break-medium) {
+    .logo {
+        .logo__image {
+            display: block;
+            width: 80%;
+            margin: 0 auto 25px;
+        }
+        .logo__title {
+            font-size: 18px;
+        }
+    }
+}

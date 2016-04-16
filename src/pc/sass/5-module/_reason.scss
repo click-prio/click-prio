@@ -1,0 +1,22 @@
+.reason {
+    text-align: center;
+    .reason__icon {
+        font-size: 100px;
+        margin-bottom: 10px;
+    }
+    .reason__title {
+        font-size: 45px;
+        color: #fff;
+    }
+}
+
+@include query($break-medium) {
+    .reason {
+        .reason__icon {
+            font-size: 50px;
+        }
+        .reason__title {
+            font-size: 22px;
+        }
+    }
+}
