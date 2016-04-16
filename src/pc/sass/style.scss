@@ -112,6 +112,7 @@ main {
     display: block;
     width: 100%;
     min-height: 45px;
+    padding: 0 10px;
     border: 1px solid #ccc;
     background-color: #eee;
 //    padding: 0 10px;
@@ -130,15 +131,39 @@ main {
 }
 
 .button-group {
+    .button-group__input {
+        margin-bottom: 5px;
+    }
+    .button-group__list {
+        > li {
+            margin-bottom: 2px;
+            &:last-child {
+                border-radius: 0 0 3px 3px;
+                margin-bottom: 0;
+            }
+        }
+    }
     .button {
         border-radius: 0;
-        margin-bottom: 2px;
         &:nth-child(1) {
             border-radius: 3px 3px 0 0;
         }
         &:last-child {
             border-radius: 0 0 3px 3px;
-            margin-bottom: 0;
         }
+    }
+}
+
+
+.form {
+    width: 100%;
+    overflow: hidden;
+    .form__inner {
+        position: relative;
+        overflow: hidden;
+        transition: transform .35s ease-in-out;
+    }
+    .form__item {
+        float: left;
     }
 }

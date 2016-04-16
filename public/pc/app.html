@@ -25,14 +25,11 @@
 
     <link rel="shortcut icon" href="images/common/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="images/common/apple-touch-icon-precomposed.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="css/style.css">
 
     <!--初めに読み込ませたいjs ここから-->
     <script src="./lib/modernizr.js"></script>
-    <script src="./lib/angular.min.js"></script>
-    <script src="./js/vendor.js"></script>
-    <script src="./js/app.js"></script>
     <!--初めに読み込ませたいjs ここまで-->
 
 </head>
@@ -76,30 +73,34 @@
 </header>
 
 <!--l-main ここから-->
-<main class="l-main" id="js-base">
-    <form class="form" action="">
+<main class="l-main" ng-controller="myController as myCtrl">
+	<form class="form" id="js-form-slider" action="#">
+		<ul class="form__inner">
+    		<li class="form__item">
     <dl>
         <dt>Select your specialist</dt>
         <dd>
-            <div class="button-group" ng-controller="myController as myCtrl">
-                <input class="input" ng-model="searchText" />
-                <ul ng-repeat="item in myCtrl.items | filter:searchText">
-                    <li>
-                        <button class="button" value="{{item.name}}">{{item.name}}</button>
+            <div class="button-group">
+                <input class="button-group__input input" placeholder="Seach doctors" ng-model="searchText" />
+                <ul class="button-group__list">
+                    <li ng-repeat="item in myCtrl.items | filter:searchText">
+                        <button class="button" type="button" value="{{item.name}}" ng-click="myCtrl.selectDr($event)">{{item.name}}</button>
                     </li>
                 </ul>
             </div>
         </dd>
     </dl>
-    <div>
-        <button class="button">Reserve</button>
-    </div>
-</form>
+</li>
+    	</ul>
+    </form>
 </main>
 <!--l-main ここまで-->
 
 
         </div>
         <!--wrapper ここまで-->
+        <script src="./lib/angular.min.js"></script>
+        <script src="./js/vendor.js"></script>
+        <script src="./js/app.js"></script>
     </body>
 </html>

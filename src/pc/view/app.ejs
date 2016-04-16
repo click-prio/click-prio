@@ -9,8 +9,12 @@
 <% include layout/_header %>
 
 <!--l-main ここから-->
-<main class="l-main" id="js-base">
-    <% include module/_view1 %>
+<main class="l-main" ng-controller="myController as myCtrl">
+	<form class="form" id="js-form-slider" action="#">
+		<ul class="form__inner">
+    		<% include module/_view1 %>
+    	</ul>
+    </form>
 </main>
 <!--l-main ここまで-->
 
