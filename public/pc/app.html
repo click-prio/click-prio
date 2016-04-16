@@ -55,7 +55,7 @@
                     <p class="user-info__phone">+6332398219</p>
                 </dt>
                 <dd class="user-info__thumb">
-                    <img src="http://placekitten.com/62/62" height="62" width="62" alt="">
+                    <!-- <img src="http://placekitten.com/62/62" height="62" width="62" alt=""> -->
                 </dd>
             </dl>
         </li>
@@ -83,8 +83,23 @@
             <div class="button-group">
                 <input class="button-group__input input" placeholder="Seach doctors" ng-model="searchText" />
                 <ul class="button-group__list">
-                    <li ng-repeat="item in myCtrl.items | filter:searchText">
-                        <button class="button" type="button" value="{{item.name}}" ng-click="myCtrl.selectDr($event)">{{item.name}}</button>
+                    <li ng-repeat="specialist in myCtrl.specialists | filter:searchText">
+                        <button class="button" type="button" value="{{specialist.name}}" ng-click="myCtrl.selectDr($event)">{{specialist.name}}</button>
+                    </li>
+                </ul>
+            </div>
+        </dd>
+    </dl>
+</li>
+    		<li class="form__item">
+    <dl>
+        <dt>Select your specialist</dt>
+        <dd>
+            <div class="button-group">
+                <input class="button-group__input input" placeholder="Seach doctors" ng-model="searchText" />
+                <ul class="button-group__list">
+                    <li ng-repeat="doctor in myCtrl.doctors | filter:searchText">
+                        <button class="button" type="button" value="{{doctor.name}}" ng-click="myCtrl.selectDr($event)">{{doctor.name}}</button>
                     </li>
                 </ul>
             </div>
