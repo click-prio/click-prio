@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>Click Prio</title>
+    <meta name="description" content="sample text,sample text">
+    <meta name="keywords" content="word1,word2,word3">
+
+    <!--viewport widthの値は、サイトの横幅 or device-width　を設定-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:description" content="sample text,sample text">
+    <meta property="og:url" content="http://pakoma.com/">
+    <meta property="og:site_name" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:type" content="blog">
+    <meta property="fb:admins" content="">
+    <meta property="og:image" content="images/common/ogp.png">
+
+    <meta name="apple-mobile-web-app-title" content="Pacoma">
+
+    <link rel="shortcut icon" href="images/common/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="images/common/apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--初めに読み込ませたいjs ここから-->
+    <script src="./lib/modernizr.js"></script>
+    <script src="./lib/angular.min.js"></script>
+    <script src="./js/vendor.js"></script>
+    <script src="./js/app.js"></script>
+    <!--初めに読み込ませたいjs ここまで-->
+
+</head>
+<body id="js-body" ng-app="myApp">
+<div id="fb-root"></div>
+
+<!--
+    javascriptを有効にしていなユーザーへのメッセージ。
+    対応外ブラウザを使用しているユーザーへのメッセージ。
+-->
+<noscript class="for-no-js">Javascriptを有効にしてください。</noscript>
+<div class="for-old">お使いのOS・ブラウザでは、本サイトを適切に閲覧できない可能性があります。最新のブラウザをご利用ください。</div>
+
+<!--jsでパスの値が必要な場合に使うタグ-->
+<input type="hidden" value="./" id="js-base-url">
+<header class="l-header">
+
+    <ul class="nav">
+        <li class="nav__item">
+            <dl class="user-info">
+                <dt class="user-info__data">
+                    <p class="user-info__name">User Name</p>
+                    <p class="user-info__phone">+6332398219</p>
+                </dt>
+                <dd class="user-info__thumb">
+                    <img src="http://placekitten.com/62/62" height="62" width="62" alt="">
+                </dd>
+            </dl>
+        </li>
+        <li class="nav__item">
+            <a class="header-link" href="#">
+                <i class="header-link__icon fa fa-lock" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="header-link" href="#">
+                <i class="header-link__icon fa fa-cog" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</header>
+
+    <div class="hero">
+        <div class="hero__inner">
+            <img class="hero__image" src="images/logo.png" alt="Click Prio"/>
+            <h1 class="hero__title">hassle-free priority number system</h1>
+        </div>
+    </div>
+
+<!--l-main ここから-->
+<main class="l-main" id="js-base" ng-controller="MyController">
+
+    <section class="caution">
+        <h1 class="caution__title">active priority number:</h1>\
+        <div class="caution__inner">
+            <p class="caution__number">
+                <strong>07</strong>
+            </p>
+            <ul class="caution__data">
+                <li class="caution__data-item">Marvel Hospital</li>
+                <li class="caution__data-item">Dr. Strange</li>
+                <li class="caution__data-item">General Physician</li>
+                <li class="caution__data-item">Now Serving: <em>05</em></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="works">
+        <h1 class="works__title">How it works</h1>
+        <div class="works__grid grid grid--col3 grid--md-col1">
+            <ul class="works__grid-inner grid__inner">
+                <li class="works__grid-item grid__item">
+                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
+                    <p>Step 1</p>
+                </li>
+                <li class="works__grid-item grid__item">
+                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
+                    <p>Step 2</p>
+                </li>
+                <li class="works__grid-item grid__item">
+                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
+                    <p>Step 3</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+<!--l-main ここまで-->
+
+
+        </div>
+        <!--wrapper ここまで-->
+    </body>
+</html>

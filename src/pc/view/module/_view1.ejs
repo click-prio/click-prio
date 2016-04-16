@@ -2,29 +2,17 @@
     <dl>
         <dt>Select your specialist</dt>
         <dd>
-            <input class="input" type="search"/>
+            <div class="button-group" ng-controller="myController as myCtrl">
+                <input class="input" ng-model="searchText" />
+                <ul ng-repeat="item in myCtrl.items | filter:searchText">
+                    <li>
+                        <button class="button" value="{{item.name}}">{{item.name}}</button>
+                    </li>
+                </ul>
+            </div>
         </dd>
     </dl>
-    <!--<dl>-->
-        <!--<dt>Select your specialist</dt>-->
-        <!--<dd>-->
-            <!--<input class="input" type="text"/>-->
-        <!--</dd>-->
-    <!--</dl>-->
-    <!--<dl>-->
-        <!--<dt>Select your specialist</dt>-->
-        <!--<dd>-->
-            <!--<input class="input" type="text"/>-->
-        <!--</dd>-->
-    <!--</dl>-->
     <div>
         <button class="button">Reserve</button>
-    </div>
-    <div>
-        <div class="button-group">
-            <button class="button">Dr.one</button>
-            <button class="button">Dr.two</button>
-            <button class="button">Dr.three</button>
-        </div>
     </div>
 </form>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"><![endif]-->
@@ -6,17 +7,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Click Prio</title>
-    <meta name="description" content="<%= description %>">
-    <meta name="keywords" content="<%= keywords %>">
+    <meta name="description" content="sample text,sample text">
+    <meta name="keywords" content="word1,word2,word3">
 
     <!--viewport widthの値は、サイトの横幅 or device-width　を設定-->
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="<%= title %>Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
-    <meta property="og:description" content="<%= description %>">
+    <meta property="og:title" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:description" content="sample text,sample text">
     <meta property="og:url" content="http://pakoma.com/">
     <meta property="og:site_name" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
-    <meta property="og:type" content="<%= type %>">
+    <meta property="og:type" content="blog">
     <meta property="fb:admins" content="">
     <meta property="og:image" content="images/common/ogp.png">
 
@@ -47,3 +48,58 @@
 
 <!--jsでパスの値が必要な場合に使うタグ-->
 <input type="hidden" value="./" id="js-base-url">
+<header class="l-header">
+
+    <ul class="nav">
+        <li class="nav__item">
+            <dl class="user-info">
+                <dt class="user-info__data">
+                    <p class="user-info__name">User Name</p>
+                    <p class="user-info__phone">+6332398219</p>
+                </dt>
+                <dd class="user-info__thumb">
+                    <img src="http://placekitten.com/62/62" height="62" width="62" alt="">
+                </dd>
+            </dl>
+        </li>
+        <li class="nav__item">
+            <a class="header-link" href="#">
+                <i class="header-link__icon fa fa-lock" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="header-link" href="#">
+                <i class="header-link__icon fa fa-cog" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</header>
+
+<!--l-main ここから-->
+<main class="l-main" id="js-base">
+    <form class="form" action="">
+    <dl>
+        <dt>Select your specialist</dt>
+        <dd>
+            <div class="button-group" ng-controller="myController as myCtrl">
+                <input class="input" ng-model="searchText" />
+                <ul ng-repeat="item in myCtrl.items | filter:searchText">
+                    <li>
+                        <button class="button" value="{{item.name}}">{{item.name}}</button>
+                    </li>
+                </ul>
+            </div>
+        </dd>
+    </dl>
+    <div>
+        <button class="button">Reserve</button>
+    </div>
+</form>
+</main>
+<!--l-main ここまで-->
+
+
+        </div>
+        <!--wrapper ここまで-->
+    </body>
+</html>
