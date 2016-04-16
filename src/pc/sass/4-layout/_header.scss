@@ -1,8 +1,28 @@
 .l-header {
     background-color: $color-main;
     overflow: hidden;
-    .nav {
+    .l-header__main {
+        float: left;
+    }
+    .l-header__sub {
         float: right;
+    }
+}
+
+.global-nav {
+    .global-nav__item {
+        display: inline-block;
+        border-right: 1px solid #293344;
+        &:last-child {
+            border: 0;
+        }
+        > a{
+            display: block;
+            padding: 22px;
+            color: #293344;
+            font-size: 25px;
+            text-decoration: none;
+        }
     }
 }
 
@@ -53,10 +73,12 @@
 
 @include query($break-medium) {
     .l-header {
-        .nav {
+        .l-header__main {
+            display: none;
+        }
+        .l-header__sub {
             float: none;
             width: 100%;
-            
         }
     }
 }

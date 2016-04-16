@@ -9,29 +9,29 @@ type = "blog";
 <% include layout/_header %>
 
     <div class="hero">
-        <div class="hero__inner">
-            <img class="hero__image" src="images/logo.png" alt="Click Prio"/>
-            <h1 class="hero__title">hassle-free priority number system</h1>
+        <div class="hero__logo logo">
+            <img class="logo__image" src="images/logo.png" alt="Click Prio"/>
+            <h1 class="logo__title">hassle-free priority<br> number system</h1>
         </div>
+
+        <article class="hero__caution caution">
+            <h1 class="caution__title">ACTIVE PRIORITY NUMBER</h1>
+            <div class="caution__inner">
+                <p class="caution__number">
+                    <strong>07</strong>
+                </p>
+                <ul class="caution__data">
+                    <li class="caution__data-item">Marvel Hospital</li>
+                    <li class="caution__data-item">Dr. Strange</li>
+                    <li class="caution__data-item">General Physician</li>
+                    <li class="caution__data-item">Now Serving: <em>05</em></li>
+                </ul>
+            </div>
+        </article>
     </div>
 
 <!--l-main ここから-->
 <main class="l-main" id="js-base" ng-controller="MyController">
-
-    <section class="caution">
-        <h1 class="caution__title">active priority number:</h1>
-        <div class="caution__inner">
-            <p class="caution__number">
-                <strong>07</strong>
-            </p>
-            <ul class="caution__data">
-                <li class="caution__data-item">Marvel Hospital</li>
-                <li class="caution__data-item">Dr. Strange</li>
-                <li class="caution__data-item">General Physician</li>
-                <li class="caution__data-item">Now Serving: <em>05</em></li>
-            </ul>
-        </div>
-    </section>
 
     <section class="start">
         <h1 class="start__title">NO MORE WAITING</h1>
