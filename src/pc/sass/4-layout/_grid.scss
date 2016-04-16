@@ -76,5 +76,10 @@ $break-large: 1024px;
                 width: 100%;
             }
         }
+        &.grid--md-col2 {
+            .grid__item {
+                width: 50%;
+            }
+        }
     }
 }

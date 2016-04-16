@@ -181,3 +181,29 @@
         color: #fff;
     }
 }
+
+
+.supporter {
+    background-color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    .supporter__title {
+        color: #808080;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    //.supporter__grid {}
+    .supporter__grid-inner {
+    }
+    .supporter__grid-item {
+        position: relative;
+        p {
+            width: 100%;
+            font-size: 15px;
+            color: #8d8d8d;
+            position: absolute;
+            left: 0;
+            top: 70%;
+        }
+    }
+}
