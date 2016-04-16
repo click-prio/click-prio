@@ -82,8 +82,53 @@
 </header>
 
 <!--l-main ここから-->
+
 <main class="l-main" ng-controller="myController as myCtrl">
-	<form class="form" id="js-form-slider" action="#">
+	<form class="form" id="js-form-slider" action="#" novalidate>
+        <div class="section-dr">
+            <ul class="section-dr__list">
+                <li class="section-dr__item">
+                    <dl class="avatar">
+                        <dt class="avatar__thumb">
+                            <img src="images/dr-generalist.png" alt="">
+                        </dt>
+                        <dd class="avatar__name">
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="doctor" value="general" ng-model="checkedSp">
+                                <span class="radio__box">
+                                    <i class="radio__icon fa fa-check"></i>
+                                </span>
+                                <span class="radio__text">General Physician</span>
+                            </label>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="section-dr__item">
+                    <dl class="avatar">
+                        <dt class="avatar__thumb">
+                            <img src="images/dr-specialist.png" alt="">
+                        </dt>
+                        <dd class="avatar__name">
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="doctor" value="specialist" ng-model="checkedSp">
+                                <span class="radio__box">
+                                    <i class="radio__icon fa fa-check"></i>
+                                </span>
+                                <span class="radio__text">Specialist</span>
+                            </label>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="section-dr__select check-element animate-show" ng-show="checkedSp === 'specialist'">
+                <div class="select">
+                    <i class="select__icon fa fa-angle-down"></i>
+                    <select class="select__object">
+                        <option ng-repeat="specialtiy in myCtrl.specialties" value="{{specialtiy.value}}">{{specialtiy.name}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
 		<ul class="form__inner">
     		<li class="form__item">
     <dl>
@@ -126,9 +171,6 @@
         <script src="./lib/angular.min.js"></script>
         <script src="./js/vendor.js"></script>
         <script src="./js/app.js"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-        <script src="./js/scrollAnimation.js"></script>
         
     </body>
 </html>

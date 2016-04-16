@@ -31,6 +31,61 @@ app.controller("myController", function () {
         {"name":"Department of Obstetrics and Gynecology" }
     ];
 
+    this.specialties = [
+        {
+            "name": "Doctor’s specialty",
+            "value": ""
+        }, {
+            "name": "Psychiatry",
+            "value": "specialty-0"
+        }, {
+            "name": "Pediatrics",
+            "value": "specialty-1"
+        }, {
+            "name": "Internal Medicine",
+            "value": "specialty-2"
+        }, {
+            "name": "Obstetrics & Gynecology",
+            "value": "specialty-3"
+        }, {
+            "name": "Ophtalmology",
+            "value": "specialty-4"
+        }, {
+            "name": "Neurology",
+            "value": "specialty-5"
+        }, {
+            "name": "Dermatology",
+            "value": "specialty-6"
+        }, {
+            "name": "Family Medicine",
+            "value": "specialty-7"
+        }, {
+            "name": "Dentist",
+            "value": "specialty-8"
+        }, {
+            "name": "Pulmonology",
+            "value": "specialty-9"
+        }, {
+            "name": "Hematology and Onconlogy",
+            "value": "specialty-10"
+        }, {
+            "name": "Rheumatology",
+            "value": "specialty-11"
+        }, {
+            "name": "Nephrology",
+            "value": "specialty-12"
+        }, {
+            "name": "Gastrointerology",
+            "value": "specialty-13"
+        }, {
+            "name": "DiabetologyCardiolog",
+            "value": "specialty-14"
+        }, {
+            "name": "yEENT",
+            "value": "specialty-15"
+        }
+    ];
+
 
     //function clickHandler(self){
     //    console.log($(self).val());
