@@ -1,18 +1,19 @@
-<form class="form" action="">
-    <dl>
-        <dt>Select your specialist</dt>
-        <dd>
-            <div class="button-group" ng-controller="myController as myCtrl">
-                <input class="input" ng-model="searchText" />
-                <ul ng-repeat="item in myCtrl.items | filter:searchText">
-                    <li>
-                        <button class="button" value="{{item.name}}">{{item.name}}</button>
-                    </li>
-                </ul>
-            </div>
-        </dd>
-    </dl>
-    <div>
-        <button class="button">Reserve</button>
-    </div>
-</form>
+<!--<form class="form" action="">-->
+    <!--<dl>-->
+        <!--<dt>Select your specialist</dt>-->
+        <!--<dd>-->
+            <!--<div class="button-group" ng-controller="myController as myCtrl">-->
+                <!--<input class="input" ng-model="searchText" />-->
+                <!--<ul ng-repeat="item in myCtrl.items | filter:searchText">-->
+                    <!--<li>-->
+                        <!--<button class="button" value="{{item.name}}">{{item.name}}</button>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</dd>-->
+    <!--</dl>-->
+    <!--<div>-->
+        <!--<button class="button">Reserve</button>-->
+    <!--</div>-->
+<!--</form>-->
+<input type="text" class="text-input" placeholder="text" value="">
