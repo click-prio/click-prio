@@ -1,0 +1,57 @@
+/*
+#styleguide
+sprite-number-small-2x
+
+```
+<i class="sprite-number-small-2x sprite-number-small-01"></i>
+<i class="sprite-number-small-2x sprite-number-small-02"></i>
+<i class="sprite-number-small-2x sprite-number-small-03"></i>
+<i class="sprite-number-small-2x sprite-number-small-04"></i>
+<i class="sprite-number-small-2x sprite-number-small-05"></i>
+<i class="sprite-number-small-2x sprite-number-small-06"></i>
+<i class="sprite-number-small-2x sprite-number-small-07"></i>
+<i class="sprite-number-small-2x sprite-number-small-08"></i>
+<i class="sprite-number-small-2x sprite-number-small-09"></i>
+<i class="sprite-number-small-2x sprite-number-small-10"></i>
+<i class="sprite-number-small-2x sprite-number-small-11"></i>
+<i class="sprite-number-small-2x sprite-number-small-12"></i>
+<i class="sprite-number-small-2x sprite-number-small-13"></i>
+<i class="sprite-number-small-2x sprite-number-small-14"></i>
+<i class="sprite-number-small-2x sprite-number-small-15"></i>
+<i class="sprite-number-small-2x sprite-number-small-16"></i>
+<i class="sprite-number-small-2x sprite-number-small-17"></i>
+<i class="sprite-number-small-2x sprite-number-small-18"></i>
+<i class="sprite-number-small-2x sprite-number-small-19"></i>
+<i class="sprite-number-small-2x sprite-number-small-20"></i>
+```
+*/
+
+$sprite-number-small-01: 46px 0px -46px 0px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-01;
+$sprite-number-small-02: 138px 46px -138px -46px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-02;
+$sprite-number-small-03: 0px 46px 0px -46px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-03;
+$sprite-number-small-04: 46px 46px -46px -46px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-04;
+$sprite-number-small-05: 92px 0px -92px 0px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-05;
+$sprite-number-small-06: 92px 46px -92px -46px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-06;
+$sprite-number-small-07: 0px 92px 0px -92px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-07;
+$sprite-number-small-08: 46px 92px -46px -92px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-08;
+$sprite-number-small-09: 92px 92px -92px -92px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-09;
+$sprite-number-small-10: 138px 0px -138px 0px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-10;
+$sprite-number-small-11: 0px 0px 0px 0px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-11;
+$sprite-number-small-12: 138px 92px -138px -92px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-12;
+$sprite-number-small-13: 0px 138px 0px -138px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-13;
+$sprite-number-small-14: 46px 138px -46px -138px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-14;
+$sprite-number-small-15: 92px 138px -92px -138px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-15;
+$sprite-number-small-16: 138px 138px -138px -138px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-16;
+$sprite-number-small-17: 184px 0px -184px 0px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-17;
+$sprite-number-small-18: 184px 46px -184px -46px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-18;
+$sprite-number-small-19: 184px 92px -184px -92px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-19;
+$sprite-number-small-20: 184px 138px -184px -138px 40px 40px 224px 178px '../images/sprite-number-small-2x.png' sprite-number-small-20;
+
+
+$sprite-number-small-2x: ($sprite-number-small-01,$sprite-number-small-02,$sprite-number-small-03,$sprite-number-small-04,$sprite-number-small-05,$sprite-number-small-06,$sprite-number-small-07,$sprite-number-small-08,$sprite-number-small-09,$sprite-number-small-10,$sprite-number-small-11,$sprite-number-small-12,$sprite-number-small-13,$sprite-number-small-14,$sprite-number-small-15,$sprite-number-small-16,$sprite-number-small-17,$sprite-number-small-18,$sprite-number-small-19,$sprite-number-small-20,);
+@each $sprite in $sprite-number-small-2x {
+    $name: nth($sprite,10);
+    .sprite-number-small-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

@@ -1,0 +1,20 @@
+.latest {
+    padding: 20px;
+    .latest-inner {
+        background-color: #000;
+    }
+    a {
+        display: block;
+        width: 300px;
+        height: 300px;
+        padding-top: 80px;
+        text-align: center;
+        background: url(#{$path-image}latest.png) 0 0 no-repeat;
+        background-size: 300px 300px;
+        transition: opacity $duration $easing;
+        //> img {}
+        &:hover {
+            opacity: $opacity;
+        }
+    }
+}

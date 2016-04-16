@@ -1,0 +1,14 @@
+.news-article {
+    .news-article-heading {
+        text-align: center;
+        margin-bottom: 4px;
+    }
+    .news-article-rankings {
+        > li {
+            border-bottom: 1px solid #fff;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}

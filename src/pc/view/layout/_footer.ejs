@@ -1,0 +1,65 @@
+<% var footerPrimaryNav = [
+    {
+        link: "category.html",
+        name: "お知らせ"
+    },{
+        link: "about.html",
+        name: "Pacomaとは"
+    },{
+        link: "homecenter.html",
+        name: "Pacomaがもらえるホームセンター"
+    },{
+        link: "supporter.html",
+        name: "Pacomaサポーター"
+    },{
+        link: "contact.html",
+        name: "お問い合わせ"
+    }
+];%>
+<% var footerSecondaryNav = [
+    {
+        name: "運営会社",
+        link: "company.html"
+    },{
+        name: "個人情報保護について",
+        link: "privacy.html"
+    }
+];%>
+
+    <!--footer ここから-->
+    <footer class="l-footer" id="js-footer">
+        <div class="l-footer-primary">
+            <div class="l-container">
+                <a class="l-footer-pagetop js-scroll" href="#js-body">
+                    <i class="icon-arrow-up"></i>
+                </a>
+                <ul class="l-footer-primary-links">
+                    <% for(var iFoot=0; iFoot< footerPrimaryNav.length; iFoot++) { %>
+                    <li>
+                        <a class="l-footer-link" href="<%= footerPrimaryNav[iFoot].link %>">
+                            <i class="icon-arrow-right"></i>
+                            <%= footerPrimaryNav[iFoot].name %>
+                            <span class="l-footer-link-bar"></span>
+                        </a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="l-footer-secondary">
+            <div class="l-container">
+                <ul class="l-footer-secondary-links">
+                    <% for(var iFoot2=0; iFoot2< footerSecondaryNav.length; iFoot2++) { %>
+                    <li>
+                        <a class="l-footer-link" href="<%= footerSecondaryNav[iFoot2].link %>">
+                            <%= footerSecondaryNav[iFoot2].name %>
+                            <span class="l-footer-link-bar"></span>
+                        </a>
+                    </li>
+                    <% } %>
+                </ul>
+                <small>&copy;2016 Pacoma</small>
+            </div>
+        </div>
+    </footer>
+    <!--footer ここまで-->

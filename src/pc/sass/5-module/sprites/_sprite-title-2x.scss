@@ -1,0 +1,41 @@
+/*
+#styleguide
+sprite-title-2x
+
+```
+<i class="sprite-title-2x sprite-title-author"></i>
+<i class="sprite-title-2x sprite-title-category"></i>
+<i class="sprite-title-2x sprite-title-facebook"></i>
+<i class="sprite-title-2x sprite-title-follow-us"></i>
+<i class="sprite-title-2x sprite-title-information"></i>
+<i class="sprite-title-2x sprite-title-instagram"></i>
+<i class="sprite-title-2x sprite-title-keyword"></i>
+<i class="sprite-title-2x sprite-title-news"></i>
+<i class="sprite-title-2x sprite-title-ranking"></i>
+<i class="sprite-title-2x sprite-title-recommend"></i>
+<i class="sprite-title-2x sprite-title-share"></i>
+<i class="sprite-title-2x sprite-title-written"></i>
+```
+*/
+
+$sprite-title-author: 483px 151px -483px -151px 455px 62px 1380px 319px '../images/sprite-title-2x.png' sprite-title-author;
+$sprite-title-category: 817px 219px -817px -219px 128px 33px 1380px 319px '../images/sprite-title-2x.png' sprite-title-category;
+$sprite-title-facebook: 374px 219px -374px -219px 248px 40px 1380px 319px '../images/sprite-title-2x.png' sprite-title-facebook;
+$sprite-title-follow-us: 0px 219px 0px -219px 368px 46px 1380px 319px '../images/sprite-title-2x.png' sprite-title-follow-us;
+$sprite-title-information: 951px 219px -951px -219px 109px 23px 1380px 319px '../images/sprite-title-2x.png' sprite-title-information;
+$sprite-title-instagram: 0px 271px 0px -271px 278px 48px 1380px 319px '../images/sprite-title-2x.png' sprite-title-instagram;
+$sprite-title-keyword: 944px 151px -944px -151px 366px 58px 1380px 319px '../images/sprite-title-2x.png' sprite-title-keyword;
+$sprite-title-news: 674px 64px -674px -64px 670px 69px 1380px 319px '../images/sprite-title-2x.png' sprite-title-news;
+$sprite-title-ranking: 0px 64px 0px -64px 668px 81px 1380px 319px '../images/sprite-title-2x.png' sprite-title-ranking;
+$sprite-title-recommend: 0px 0px 0px 0px 1380px 58px 1380px 319px '../images/sprite-title-2x.png' sprite-title-recommend;
+$sprite-title-share: 0px 151px 0px -151px 477px 62px 1380px 319px '../images/sprite-title-2x.png' sprite-title-share;
+$sprite-title-written: 628px 219px -628px -219px 183px 33px 1380px 319px '../images/sprite-title-2x.png' sprite-title-written;
+
+
+$sprite-title-2x: ($sprite-title-author,$sprite-title-category,$sprite-title-facebook,$sprite-title-follow-us,$sprite-title-information,$sprite-title-instagram,$sprite-title-keyword,$sprite-title-news,$sprite-title-ranking,$sprite-title-recommend,$sprite-title-share,$sprite-title-written,);
+@each $sprite in $sprite-title-2x {
+    $name: nth($sprite,10);
+    .sprite-title-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

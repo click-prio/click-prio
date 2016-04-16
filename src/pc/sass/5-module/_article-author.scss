@@ -1,0 +1,27 @@
+.article-author {
+	@extend %u-clear;
+	margin-bottom: 16px;
+	
+	.article-author-img-holder {
+		float: left;
+		
+		> img {
+			width: 70px;
+			height: 70px;
+		}
+	}
+	.article-author-body {
+		margin-left: 86px;
+		
+		.article-author-h {
+			font-size: 13px;
+			font-weight: bold;
+			line-height: 20px;
+			margin-bottom: 5px;
+		}
+		> p {
+			font-size: 11px;
+			line-height: 1.25em;
+		}
+	}
+}

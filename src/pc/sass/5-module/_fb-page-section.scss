@@ -1,0 +1,15 @@
+.fb-page-section {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    .fb-page-section-heading {
+        margin-bottom: 8px;
+    }
+    .fb-page-section-wrap {
+        width: 100%;
+        height: 154px;
+    }
+    iframe {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,29 @@
+/*
+#styleguide
+sprite-hero-2x
+
+```
+<i class="sprite-hero-2x sprite-hero-about"></i>
+<i class="sprite-hero-2x sprite-hero-company"></i>
+<i class="sprite-hero-2x sprite-hero-contact"></i>
+<i class="sprite-hero-2x sprite-hero-homecenter"></i>
+<i class="sprite-hero-2x sprite-hero-privacy"></i>
+<i class="sprite-hero-2x sprite-hero-supporter"></i>
+```
+*/
+
+$sprite-hero-about: 0px 486px 0px -486px 660px 156px 1184px 966px '../images/sprite-hero-2x.png' sprite-hero-about;
+$sprite-hero-company: 0px 810px 0px -810px 556px 156px 1184px 966px '../images/sprite-hero-2x.png' sprite-hero-company;
+$sprite-hero-contact: 0px 648px 0px -648px 648px 156px 1184px 966px '../images/sprite-hero-2x.png' sprite-hero-contact;
+$sprite-hero-homecenter: 0px 0px 0px 0px 1184px 156px 1184px 966px '../images/sprite-hero-2x.png' sprite-hero-homecenter;
+$sprite-hero-privacy: 0px 162px 0px -162px 880px 156px 1184px 966px '../images/sprite-hero-2x.png' sprite-hero-privacy;
+$sprite-hero-supporter: 0px 324px 0px -324px 826px 156px 1184px 966px '../images/sprite-hero-2x.png' sprite-hero-supporter;
+
+
+$sprite-hero-2x: ($sprite-hero-about,$sprite-hero-company,$sprite-hero-contact,$sprite-hero-homecenter,$sprite-hero-privacy,$sprite-hero-supporter,);
+@each $sprite in $sprite-hero-2x {
+    $name: nth($sprite,10);
+    .sprite-hero-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

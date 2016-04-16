@@ -1,0 +1,15 @@
+.l-container {
+    width: $size-max;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+    @extend %u-clear;
+
+    &.l-container-small {
+        width: 1060px;
+    }
+
+    &.l-container-xsmall {
+        width: 800px + 60;
+    }
+}

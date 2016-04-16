@@ -1,0 +1,23 @@
+/*
+#styleguide
+sprite-latest-2x
+
+```
+<i class="sprite-latest-2x sprite-latest-copy"></i>
+<i class="sprite-latest-2x sprite-latest-heading"></i>
+<i class="sprite-latest-2x sprite-latest-logo"></i>
+```
+*/
+
+$sprite-latest-copy: 0px 0px 0px 0px 288px 45px 590px 131px '../images/sprite-latest-2x.png' sprite-latest-copy;
+$sprite-latest-heading: 294px 0px -294px 0px 296px 34px 590px 131px '../images/sprite-latest-2x.png' sprite-latest-heading;
+$sprite-latest-logo: 0px 51px 0px -51px 85px 80px 590px 131px '../images/sprite-latest-2x.png' sprite-latest-logo;
+
+
+$sprite-latest-2x: ($sprite-latest-copy,$sprite-latest-heading,$sprite-latest-logo,);
+@each $sprite in $sprite-latest-2x {
+    $name: nth($sprite,10);
+    .sprite-latest-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

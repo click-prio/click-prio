@@ -1,0 +1,31 @@
+/*
+#styleguide
+sprite-ribbon-2x
+
+```
+<i class="sprite-ribbon-2x sprite-ribbon-column"></i>
+<i class="sprite-ribbon-2x sprite-ribbon-diy"></i>
+<i class="sprite-ribbon-2x sprite-ribbon-gardening"></i>
+<i class="sprite-ribbon-2x sprite-ribbon-goods"></i>
+<i class="sprite-ribbon-2x sprite-ribbon-life"></i>
+<i class="sprite-ribbon-2x sprite-ribbon-news"></i>
+<i class="sprite-ribbon-2x sprite-ribbon-present"></i>
+```
+*/
+
+$sprite-ribbon-column: 0px 0px 0px 0px 512px 80px 1030px 510px '../images/sprite-ribbon-2x.png' sprite-ribbon-column;
+$sprite-ribbon-diy: 0px 86px 0px -86px 512px 80px 1030px 510px '../images/sprite-ribbon-2x.png' sprite-ribbon-diy;
+$sprite-ribbon-gardening: 0px 172px 0px -172px 512px 80px 1030px 510px '../images/sprite-ribbon-2x.png' sprite-ribbon-gardening;
+$sprite-ribbon-goods: 0px 258px 0px -258px 512px 80px 1030px 510px '../images/sprite-ribbon-2x.png' sprite-ribbon-goods;
+$sprite-ribbon-life: 0px 344px 0px -344px 512px 80px 1030px 510px '../images/sprite-ribbon-2x.png' sprite-ribbon-life;
+$sprite-ribbon-news: 0px 430px 0px -430px 512px 80px 1030px 510px '../images/sprite-ribbon-2x.png' sprite-ribbon-news;
+$sprite-ribbon-present: 518px 0px -518px 0px 512px 80px 1030px 510px '../images/sprite-ribbon-2x.png' sprite-ribbon-present;
+
+
+$sprite-ribbon-2x: ($sprite-ribbon-column,$sprite-ribbon-diy,$sprite-ribbon-gardening,$sprite-ribbon-goods,$sprite-ribbon-life,$sprite-ribbon-news,$sprite-ribbon-present,);
+@each $sprite in $sprite-ribbon-2x {
+    $name: nth($sprite,10);
+    .sprite-ribbon-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

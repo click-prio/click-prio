@@ -1,0 +1,51 @@
+.follow-us {
+    padding: 28px 0 20px;
+    text-align: center;
+    .follow-us-heading {
+        line-height: 1;
+        margin-bottom: 12px;
+    }
+    //.follow-us-list {}
+    .follow-us-item {
+        display: inline-block;
+        margin: 0 7px;
+        > a {
+            display: block;
+            font-size: 36px;
+            color: #000;
+            text-decoration: none;
+            transition: color $duration-quick $easing;
+        }
+    }
+    .follow-us-facebook:hover {
+        color: $color-facebook;
+    }
+    .follow-us-twitter:hover {
+        color: $color-twitter;
+    }
+    .follow-us-instagram:hover {
+        color: $color-instagram;
+    }
+
+    //headerにあるやつ
+    &.follow-us-small {
+        .follow-us-item {
+            margin: 0 1px;
+        }
+        a {
+            color: #7f7f7f;
+            font-size: 21px;
+        }
+    }
+
+    //追従headerにあるやつ
+    &.follow-us-xsmall {
+        .follow-us-item {
+            margin: 0 1px;
+        }
+        a {
+            color: #7f7f7f;
+            font-size: 18px;
+        }
+    }
+}

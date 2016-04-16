@@ -1,0 +1,31 @@
+.privacy-contents {
+    padding: 0 15px;
+
+    .primary-heading {
+        margin-bottom: 26px;
+    }
+
+    > p {
+        line-height: 1.5;
+        letter-spacing: -.02em;
+        margin-bottom: 21px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        > em {
+            padding-top: 5px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &.privacy-contents-margin {
+        margin-bottom: 75px;
+    }
+}

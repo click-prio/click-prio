@@ -1,0 +1,45 @@
+/*
+#styleguide
+sprite-nav-2x
+
+```
+<i class="sprite-nav-2x sprite-nav-all-off"></i>
+<i class="sprite-nav-2x sprite-nav-all-on"></i>
+<i class="sprite-nav-2x sprite-nav-column-off"></i>
+<i class="sprite-nav-2x sprite-nav-column-on"></i>
+<i class="sprite-nav-2x sprite-nav-diy-off"></i>
+<i class="sprite-nav-2x sprite-nav-diy-on"></i>
+<i class="sprite-nav-2x sprite-nav-gardening-off"></i>
+<i class="sprite-nav-2x sprite-nav-gardening-on"></i>
+<i class="sprite-nav-2x sprite-nav-goods-off"></i>
+<i class="sprite-nav-2x sprite-nav-goods-on"></i>
+<i class="sprite-nav-2x sprite-nav-life-off"></i>
+<i class="sprite-nav-2x sprite-nav-life-on"></i>
+<i class="sprite-nav-2x sprite-nav-present-off"></i>
+<i class="sprite-nav-2x sprite-nav-present-on"></i>
+```
+*/
+
+$sprite-nav-all-off: 162px 272px -162px -272px 156px 52px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-all-off;
+$sprite-nav-all-on: 0px 272px 0px -272px 156px 52px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-all-on;
+$sprite-nav-column-off: 252px 0px -252px 0px 270px 40px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-column-off;
+$sprite-nav-column-on: 252px 46px -252px -46px 270px 40px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-column-on;
+$sprite-nav-diy-off: 324px 272px -324px -272px 114px 48px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-diy-off;
+$sprite-nav-diy-on: 404px 216px -404px -216px 114px 48px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-diy-on;
+$sprite-nav-gardening-off: 252px 146px -252px -146px 228px 48px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-gardening-off;
+$sprite-nav-gardening-on: 252px 92px -252px -92px 228px 48px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-gardening-on;
+$sprite-nav-goods-off: 0px 0px 0px 0px 246px 48px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-goods-off;
+$sprite-nav-goods-on: 0px 54px 0px -54px 246px 48px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-goods-on;
+$sprite-nav-life-off: 0px 162px 0px -162px 238px 48px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-life-off;
+$sprite-nav-life-on: 0px 108px 0px -108px 238px 48px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-life-on;
+$sprite-nav-present-off: 0px 216px 0px -216px 196px 50px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-present-off;
+$sprite-nav-present-on: 202px 216px -202px -216px 196px 50px 522px 324px '../images/sprite-nav-2x.png' sprite-nav-present-on;
+
+
+$sprite-nav-2x: ($sprite-nav-all-off,$sprite-nav-all-on,$sprite-nav-column-off,$sprite-nav-column-on,$sprite-nav-diy-off,$sprite-nav-diy-on,$sprite-nav-gardening-off,$sprite-nav-gardening-on,$sprite-nav-goods-off,$sprite-nav-goods-on,$sprite-nav-life-off,$sprite-nav-life-on,$sprite-nav-present-off,$sprite-nav-present-on,);
+@each $sprite in $sprite-nav-2x {
+    $name: nth($sprite,10);
+    .sprite-nav-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

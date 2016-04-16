@@ -1,0 +1,47 @@
+.holder-cards {
+    width: 100%;
+    min-width: $size-max;
+    background-color: #fff;
+    border-bottom: 4px solid #fff;
+    box-shadow: 0 1px 0 #000;
+
+    .holder-cards-wrap {
+        width: 100%;
+        overflow: hidden;
+        padding: 32px 0 37px;
+        border-bottom: 2px solid #000;
+    }
+
+    .holder-cards-inner {
+        text-align: center;
+        position: relative;
+    }
+    .holder-cards-list {
+        display: inline-block;
+        font-size: 0;
+        letter-spacing: 0;
+    }
+    .holder-cards-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 457px;
+    }
+
+    //skin class
+    &.holder-cards-margin {
+        margin-bottom: 17px;
+    }
+}
+
+@include query(457px * 3){
+    .holder-cards .holder-cards-item {
+        width: 33.33%;
+    }
+}
+.windows {
+    @include query((457px * 3) + 25){
+        .holder-cards .holder-cards-item {
+            width: 33.33%;
+        }
+    }
+}

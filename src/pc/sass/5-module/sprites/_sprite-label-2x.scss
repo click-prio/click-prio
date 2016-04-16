@@ -1,0 +1,33 @@
+/*
+#styleguide
+sprite-label-2x
+
+```
+<i class="sprite-label-2x sprite-label-diy"></i>
+<i class="sprite-label-2x sprite-label-gardening"></i>
+<i class="sprite-label-2x sprite-label-goods"></i>
+<i class="sprite-label-2x sprite-label-life"></i>
+<i class="sprite-label-2x sprite-label-new"></i>
+<i class="sprite-label-2x sprite-label-news"></i>
+<i class="sprite-label-2x sprite-label-present"></i>
+<i class="sprite-label-2x sprite-label-report"></i>
+```
+*/
+
+$sprite-label-diy: 348px 164px -348px -164px 192px 76px 626px 322px '../images/sprite-label-2x.png' sprite-label-diy;
+$sprite-label-gardening: 0px 82px 0px -82px 308px 76px 626px 322px '../images/sprite-label-2x.png' sprite-label-gardening;
+$sprite-label-goods: 0px 164px 0px -164px 308px 76px 626px 322px '../images/sprite-label-2x.png' sprite-label-goods;
+$sprite-label-life: 0px 246px 0px -246px 308px 76px 626px 322px '../images/sprite-label-2x.png' sprite-label-life;
+$sprite-label-new: 348px 246px -348px -246px 142px 60px 626px 322px '../images/sprite-label-2x.png' sprite-label-new;
+$sprite-label-news: 348px 82px -348px -82px 244px 76px 626px 322px '../images/sprite-label-2x.png' sprite-label-news;
+$sprite-label-present: 348px 0px -348px 0px 278px 76px 626px 322px '../images/sprite-label-2x.png' sprite-label-present;
+$sprite-label-report: 0px 0px 0px 0px 342px 76px 626px 322px '../images/sprite-label-2x.png' sprite-label-report;
+
+
+$sprite-label-2x: ($sprite-label-diy,$sprite-label-gardening,$sprite-label-goods,$sprite-label-life,$sprite-label-new,$sprite-label-news,$sprite-label-present,$sprite-label-report,);
+@each $sprite in $sprite-label-2x {
+    $name: nth($sprite,10);
+    .sprite-label-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

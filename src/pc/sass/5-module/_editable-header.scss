@@ -1,0 +1,92 @@
+.editable-header {
+    .editable-header-eyecatch {
+        min-height: 388px;
+        position: relative;
+        margin-bottom: 18px;
+        .editable-header-category {
+            position: absolute;
+            z-index: 2;
+            bottom: -22px;
+            width: 100%;
+            text-align: center;
+        }
+        .editable-header-labels {
+            position: absolute;
+            z-index: 2;
+            right: 5px;
+            bottom: 5px;
+            font-size: 0;
+            margin: 0 -1px;
+            .sprite-parts-2x {
+                margin: 0 1px;
+                vertical-align: bottom;
+            }
+        }
+        > img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .editable-header-meta {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        margin-bottom: 6px;
+    }
+    .editable-header-author {
+        display: table-cell;
+        vertical-align: middle;
+        > img {
+            vertical-align: middle;
+            border-radius: 50%;
+            margin-right: 9px;
+        }
+        > span {
+            vertical-align: middle;
+            font-size: 14px;
+            line-height: 2;
+            position: relative;
+            top: 2px;
+        }
+    }
+    .editable-header-date {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+        > time {
+            font-family: $font-en;
+            font-size: 14px;
+        }
+    }
+    .editable-heading {
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.35;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+    }
+    .editable-header-summary {}
+    .editable-header-summary-text {
+        line-height: 1.4;
+        font-size: 14px;
+        letter-spacing: -.02em;
+        margin-bottom: 13px;
+    }
+    .editable-header-summary-rating {
+        background-color: $color-foundation-light;
+        padding: 13px 20px;
+        > dt,
+        > dd {
+            display: inline-block;
+            vertical-align: middle;
+            letter-spacing: -.02em;
+        }
+        > dt {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        //> dd {}
+    }
+}

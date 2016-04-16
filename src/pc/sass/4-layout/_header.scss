@@ -1,0 +1,62 @@
+.l-header {
+    background-color: $color-main;
+    overflow: hidden;
+    .nav {
+        float: right;
+    }
+}
+
+.user-info {
+    display: table;
+    .user-info__data {
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 10px;
+    }
+    .user-info__name {
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .user-info__phone {
+        color: #487c83;
+    }
+    .user-info__thumb {
+        display: table-cell;
+        vertical-align: middle;
+        > img {
+            border-radius: 50%;
+        }
+    }
+}
+.nav {
+    display: table;
+    .nav__item {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        padding: 15px;
+        border-right: 1px solid #487c83;
+        &:last-child {
+            border: 0;
+        }
+    }
+}
+
+.header-link {
+    .header-link__icon {
+        color: #090f19;
+        font-size: 30px;
+    }
+}
+
+@include query($break-medium) {
+    .l-header {
+        .nav {
+            float: none;
+            width: 100%;
+            
+        }
+    }
+}

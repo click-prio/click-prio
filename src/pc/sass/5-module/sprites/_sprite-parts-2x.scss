@@ -1,0 +1,31 @@
+/*
+#styleguide
+sprite-parts-2x
+
+```
+<i class="sprite-parts-2x sprite-parts-arrow"></i>
+<i class="sprite-parts-2x sprite-parts-corner"></i>
+<i class="sprite-parts-2x sprite-parts-hand"></i>
+<i class="sprite-parts-2x sprite-parts-link"></i>
+<i class="sprite-parts-2x sprite-parts-movie"></i>
+<i class="sprite-parts-2x sprite-parts-pr"></i>
+<i class="sprite-parts-2x sprite-parts-quote"></i>
+```
+*/
+
+$sprite-parts-arrow: 202px 46px -202px -46px 14px 24px 228px 148px '../images/sprite-parts-2x.png' sprite-parts-arrow;
+$sprite-parts-corner: 106px 0px -106px 0px 56px 57px 228px 148px '../images/sprite-parts-2x.png' sprite-parts-corner;
+$sprite-parts-hand: 0px 0px 0px 0px 100px 94px 228px 148px '../images/sprite-parts-2x.png' sprite-parts-hand;
+$sprite-parts-link: 168px 46px -168px -46px 28px 24px 228px 148px '../images/sprite-parts-2x.png' sprite-parts-link;
+$sprite-parts-movie: 66px 100px -66px -100px 60px 40px 228px 148px '../images/sprite-parts-2x.png' sprite-parts-movie;
+$sprite-parts-pr: 168px 0px -168px 0px 60px 40px 228px 148px '../images/sprite-parts-2x.png' sprite-parts-pr;
+$sprite-parts-quote: 0px 100px 0px -100px 60px 48px 228px 148px '../images/sprite-parts-2x.png' sprite-parts-quote;
+
+
+$sprite-parts-2x: ($sprite-parts-arrow,$sprite-parts-corner,$sprite-parts-hand,$sprite-parts-link,$sprite-parts-movie,$sprite-parts-pr,$sprite-parts-quote,);
+@each $sprite in $sprite-parts-2x {
+    $name: nth($sprite,10);
+    .sprite-parts-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

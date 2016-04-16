@@ -1,0 +1,18 @@
+<!--l-sidebar ここから-->
+<div class="l-sidebar" id="js-sticky">
+    <% if(id === "index" || id === "article") { %>
+    <div class="side-box m-bottom5">
+        <% include ../sidebar/_latest %>
+        <% include ../sidebar/_ranking %>
+        <% include ../sidebar/_banner %>
+        <% include ../sidebar/_news-article %>
+    </div>
+    <% } %>
+    <div class="side-box side-box-frame">
+        <% include ../sidebar/_facebook-widget %>
+        <% include ../sidebar/_instagram %>
+        <% var followUs = ""; %>
+        <% include ../sidebar/_follow-us %>
+    </div>
+</div>
+<!--l-sidebar ここまで-->

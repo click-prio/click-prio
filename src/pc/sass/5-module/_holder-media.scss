@@ -1,0 +1,8 @@
+.holder-media {
+    .holder-media-item {
+        margin-bottom: 26px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+/*
+#styleguide
+sprite-number-2x
+
+```
+<i class="sprite-number-2x sprite-number-01"></i>
+<i class="sprite-number-2x sprite-number-02"></i>
+<i class="sprite-number-2x sprite-number-03"></i>
+<i class="sprite-number-2x sprite-number-04"></i>
+<i class="sprite-number-2x sprite-number-05"></i>
+<i class="sprite-number-2x sprite-number-06"></i>
+<i class="sprite-number-2x sprite-number-07"></i>
+<i class="sprite-number-2x sprite-number-08"></i>
+<i class="sprite-number-2x sprite-number-09"></i>
+<i class="sprite-number-2x sprite-number-10"></i>
+<i class="sprite-number-2x sprite-number-11"></i>
+<i class="sprite-number-2x sprite-number-12"></i>
+<i class="sprite-number-2x sprite-number-13"></i>
+<i class="sprite-number-2x sprite-number-14"></i>
+<i class="sprite-number-2x sprite-number-15"></i>
+<i class="sprite-number-2x sprite-number-16"></i>
+<i class="sprite-number-2x sprite-number-17"></i>
+<i class="sprite-number-2x sprite-number-18"></i>
+<i class="sprite-number-2x sprite-number-19"></i>
+<i class="sprite-number-2x sprite-number-20"></i>
+```
+*/
+
+$sprite-number-01: 66px 0px -66px 0px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-01;
+$sprite-number-02: 198px 66px -198px -66px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-02;
+$sprite-number-03: 0px 66px 0px -66px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-03;
+$sprite-number-04: 66px 66px -66px -66px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-04;
+$sprite-number-05: 132px 0px -132px 0px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-05;
+$sprite-number-06: 132px 66px -132px -66px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-06;
+$sprite-number-07: 0px 132px 0px -132px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-07;
+$sprite-number-08: 66px 132px -66px -132px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-08;
+$sprite-number-09: 132px 132px -132px -132px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-09;
+$sprite-number-10: 198px 0px -198px 0px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-10;
+$sprite-number-11: 0px 0px 0px 0px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-11;
+$sprite-number-12: 198px 132px -198px -132px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-12;
+$sprite-number-13: 0px 198px 0px -198px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-13;
+$sprite-number-14: 66px 198px -66px -198px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-14;
+$sprite-number-15: 132px 198px -132px -198px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-15;
+$sprite-number-16: 198px 198px -198px -198px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-16;
+$sprite-number-17: 264px 0px -264px 0px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-17;
+$sprite-number-18: 264px 66px -264px -66px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-18;
+$sprite-number-19: 264px 132px -264px -132px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-19;
+$sprite-number-20: 264px 198px -264px -198px 60px 60px 324px 258px '../images/sprite-number-2x.png' sprite-number-20;
+
+
+$sprite-number-2x: ($sprite-number-01,$sprite-number-02,$sprite-number-03,$sprite-number-04,$sprite-number-05,$sprite-number-06,$sprite-number-07,$sprite-number-08,$sprite-number-09,$sprite-number-10,$sprite-number-11,$sprite-number-12,$sprite-number-13,$sprite-number-14,$sprite-number-15,$sprite-number-16,$sprite-number-17,$sprite-number-18,$sprite-number-19,$sprite-number-20,);
+@each $sprite in $sprite-number-2x {
+    $name: nth($sprite,10);
+    .sprite-number-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

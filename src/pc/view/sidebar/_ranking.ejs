@@ -1,0 +1,47 @@
+<aside class="news-article m-bottom2">
+    <h1 class="news-article-heading">
+        <i class="sprite-title-2x sprite-title-ranking">アクセスランキング</i>
+    </h1>
+
+    <ul class="news-article-rankings">
+        <% var articleMedia = [
+        {
+            class: "article-media-ranking",
+            image: "img-19.jpg",
+            heading: "置くだけ、拭くだけ、スプレーするだけ…“だけ”掃除でかんたんきれい！",
+            category: "家事ラクグッズ",
+            pr: true,
+            movie: true
+        },
+        {
+            class: "article-media-ranking",
+            image: "img-19.jpg",
+            heading: "置くだけ、拭くだけ、スプレーするだけ…“だけ”掃除でかんたんきれい！",
+            category: "家事ラクグッズ"
+        },
+        {
+            class: "article-media-ranking",
+            image: "img-19.jpg",
+            heading: "置くだけ、拭くだけ、スプレーするだけ…“だけ”掃除でかんたんきれい！",
+            category: "家事ラクグッズ"
+        },
+        {
+            class: "article-media-ranking",
+            image: "img-19.jpg",
+            heading: "置くだけ、拭くだけ、スプレーするだけ…“だけ”掃除でかんたんきれい！",
+            category: "家事ラクグッズ"
+        },
+        {
+            class: "article-media-ranking",
+            image: "img-19.jpg",
+            heading: "置くだけ、拭くだけ、スプレーするだけ…“だけ”掃除でかんたんきれい！",
+            category: "家事ラクグッズ"
+        }
+        ];%>
+        <% for(var iMedia=0; iMedia< articleMedia.length; iMedia++) { %>
+        <li>
+            <% include ../module/_article-media %>
+        </li>
+        <% } %>
+    </ul>
+</aside>

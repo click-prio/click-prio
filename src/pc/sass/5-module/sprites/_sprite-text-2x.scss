@@ -1,0 +1,23 @@
+/*
+#styleguide
+sprite-text-2x
+
+```
+<i class="sprite-text-2x sprite-text-more"></i>
+<i class="sprite-text-2x sprite-text-next"></i>
+<i class="sprite-text-2x sprite-text-prev"></i>
+```
+*/
+
+$sprite-text-more: 0px 0px 0px 0px 100px 37px 181px 72px '../images/sprite-text-2x.png' sprite-text-more;
+$sprite-text-next: 106px 0px -106px 0px 75px 29px 181px 72px '../images/sprite-text-2x.png' sprite-text-next;
+$sprite-text-prev: 0px 43px 0px -43px 76px 29px 181px 72px '../images/sprite-text-2x.png' sprite-text-prev;
+
+
+$sprite-text-2x: ($sprite-text-more,$sprite-text-next,$sprite-text-prev,);
+@each $sprite in $sprite-text-2x {
+    $name: nth($sprite,10);
+    .sprite-text-2x.#{$name} {
+        @include sprite($sprite,0.5);
+    }
+}

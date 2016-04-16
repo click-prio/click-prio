@@ -1,0 +1,1 @@
+window.jQuery = window.$ = require('../lib/jquery-2.2.0.min.js');

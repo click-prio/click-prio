@@ -1,0 +1,60 @@
+<% var
+id = "index",
+title = "",
+description = "sample text,sample text",
+keywords = "word1,word2,word3",
+type = "blog";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+    <div class="hero">
+        <div class="hero__inner">
+            <img class="hero__image" src="images/logo.png" alt="Click Prio"/>
+            <h1 class="hero__title">hassle-free priority number system</h1>
+        </div>
+    </div>
+
+<!--l-main ここから-->
+<main class="l-main" id="js-base" ng-controller="MyController">
+
+    <section class="caution">
+        <h1 class="caution__title">active priority number:</h1>\
+        <div class="caution__inner">
+            <p class="caution__number">
+                <strong>07</strong>
+            </p>
+            <ul class="caution__data">
+                <li class="caution__data-item">Marvel Hospital</li>
+                <li class="caution__data-item">Dr. Strange</li>
+                <li class="caution__data-item">General Physician</li>
+                <li class="caution__data-item">Now Serving: <em>05</em></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="works">
+        <h1 class="works__title">How it works</h1>
+        <div class="works__grid grid grid--col3 grid--md-col1">
+            <ul class="works__grid-inner grid__inner">
+                <li class="works__grid-item grid__item">
+                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
+                    <p>Step 1</p>
+                </li>
+                <li class="works__grid-item grid__item">
+                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
+                    <p>Step 2</p>
+                </li>
+                <li class="works__grid-item grid__item">
+                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
+                    <p>Step 3</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+<!--l-main ここまで-->
+
+
+<% include layout/_script %>

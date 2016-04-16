@@ -1,0 +1,42 @@
+.instagram-section {
+    .instagram-section-heading {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    .instagram-section-list {
+        text-align: center;
+        font-size: 0;
+        letter-spacing: 0;
+        margin: 0 -5px;
+    }
+    .instagram-section-item {
+        display: inline-block;
+        position: relative;
+        background-color: #000;
+        margin: 0 5px;
+        &:nth-of-type(1) .sprite-parts-corner {
+            top: -3px;
+            left: -3px;
+        }
+        &:nth-of-type(2) .sprite-parts-corner {
+            bottom: -3px;
+            right: -3px;
+        }
+        > a {
+            display: block;
+            width: 145px;
+            height: 145px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            transition: opacity $duration $easing;
+            &:hover {
+                text-decoration: none;
+                opacity: $opacity;
+            }
+        }
+    }
+    .sprite-parts-corner {
+        position: absolute;
+    }
+}

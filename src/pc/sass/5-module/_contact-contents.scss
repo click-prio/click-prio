@@ -1,0 +1,21 @@
+.contact-contents {
+    text-align: center;
+    .contact-contents-description {
+        line-height: 1.5;
+        letter-spacing: -.02em;
+        margin-bottom: 75px;
+    }
+    .contact-contents-list {
+        font-size: 0;
+        margin: -30px -23px;
+        letter-spacing: 0;
+        > li {
+            display: inline-block;
+            width: 50%;
+            padding: 30px 23px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.l-wrapper {
+	background: #fff;
+    width: 100%;
+    min-width: $size-max;
+    min-height: 100%;
+	z-index: $max-z - 1;
+    .l-wrapper-inner {
+        width: 100%;
+        min-height: 100%;
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+    }
+}

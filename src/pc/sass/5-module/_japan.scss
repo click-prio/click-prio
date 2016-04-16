@@ -1,0 +1,333 @@
+@mixin jpColor($color){
+    background-color: $color;
+    &:hover {
+        background-color: darken($color, 20%);
+    }
+}
+@mixin jpSize($width, $height){
+    width: $width + px;
+    height: $height + px;
+    line-height: $height + px;
+}
+
+.japan {
+    .primary-heading {
+        margin-bottom: 30px;
+    }
+    .japan-inner {
+        width: 690px;
+        height: 408px;
+        position: relative;
+    }
+    
+    .japan-heading {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: -.02em;
+        position: absolute;
+        top: 90px;
+        left: 218px;
+    }
+
+    .japan-link {
+        width: 50px;
+        height: 34px;
+        line-height: 34px;
+        display: block;
+        background-color: $color-gray;
+        color: #fff;
+        text-align: center;
+        letter-spacing: -.02em;
+        text-decoration: none; 
+        transition: background-color $duration $easing;
+        position: absolute;
+        &:hover {
+            text-decoration: none;
+        }
+
+        //
+        &.japan-link-hokkaido {
+            @include jpSize(114, 80);
+            top: 0;
+            right: 0;
+            background-color: #b0ce20;
+            &:hover {
+                background-color: #90b706;
+            }
+        }
+        &.japan-link-aomori {
+            @include jpColor(#79c56f);
+            @include jpSize(102, 34);
+            top: 86px;
+            right: 14px;
+        }
+        &.japan-link-akita {
+            @include jpColor(#79c56f);
+            top: 122px;
+            right: 66px;
+        }
+        &.japan-link-iwate {
+            @include jpColor(#79c56f);
+            top: 122px;
+            right: 14px;
+        }
+
+        //
+        &.japan-link-yamagata {
+            @include jpColor(#79c56f);
+            top: 158px;
+            right: 66px;
+        }
+        &.japan-link-miyagi {
+            @include jpColor(#79c56f);
+            top: 158px;
+            right: 14px;
+        }
+        &.japan-link-iwate {
+            @include jpColor(#79c56f);
+            top: 122px;
+            right: 14px;
+        }
+        &.japan-link-fukushima {
+            @include jpColor(#79c56f);
+            @include jpSize(102, 34);
+            top: 194px;
+            right: 14px;
+        }
+        &.japan-link-gunma {
+            @include jpColor(#66b8a9);
+            top: 230px;
+            right: 66px;
+        }
+        &.japan-link-tochigi {
+            @include jpColor(#66b8a9);
+            top: 230px;
+            right: 14px;
+        }
+        &.japan-link-saitama {
+            @include jpColor(#66b8a9);
+            top: 266px;
+            right: 66px;
+        }
+        &.japan-link-ibaraki {
+            @include jpColor(#66b8a9);
+            top: 266px;
+            right: 14px;
+        }
+        &.japan-link-yamanashi {
+            @include jpColor(#66b8a9);
+            top: 302px;
+            right: 118px;
+        }
+        &.japan-link-tokyo {
+            @include jpColor(#66b8a9);
+            top: 302px;
+            right: 66px;
+        }
+        &.japan-link-chiba {
+            @include jpColor(#66b8a9);
+            top: 302px;
+            right: 14px;
+        }
+        &.japan-link-kanagawa {
+            @include jpColor(#66b8a9);
+            @include jpSize(102, 34);
+            top: 338px;
+            right: 14px;
+        }
+
+        //
+        &.japan-link-ishikawa {
+            @include jpColor(#79b0da);
+            top: 194px;
+            right: 222px;
+        }
+        &.japan-link-toyama {
+            @include jpColor(#79b0da);
+            top: 194px;
+            right: 170px;
+        }
+        &.japan-link-nigata {
+            @include jpColor(#79b0da);
+            top: 194px;
+            right: 118px;
+        }
+        &.japan-link-fukui {
+            @include jpColor(#79b0da);
+            top: 230px;
+            right: 222px;
+        }
+        &.japan-link-nagano {
+            @include jpColor(#79b0da);
+            @include jpSize(50, 70);
+            top: 230px;
+            right: 118px;
+        }
+
+        //
+        &.japan-link-gifu {
+            @include jpColor(#7d91e6);
+            @include jpSize(50, 70);
+            top: 230px;
+            right: 170px;
+        }
+        &.japan-link-mie {
+            @include jpColor(#7d91e6);
+            top: 302px;
+            right: 222px;
+        }
+        &.japan-link-aichi {
+            @include jpColor(#7d91e6);
+            top: 302px;
+            right: 170px;
+        }
+        &.japan-link-shizuoka {
+            @include jpColor(#7d91e6);
+            top: 338px;
+            right: 118px;
+        }
+
+        //
+        &.japan-link-hyogo  {
+            @include jpColor(#a88cd6);
+            top: 266px;
+            right: 326px;
+        }
+        &.japan-link-kyoto {
+            @include jpColor(#a88cd6);
+            top: 266px;
+            right: 274px;
+        }
+        &.japan-link-shiga {
+            @include jpColor(#a88cd6);
+            top: 266px;
+            right: 222px;
+        }
+        &.japan-link-osaka {
+            @include jpColor(#a88cd6);
+            top: 302px;
+            right: 326px;
+        }
+        &.japan-link-nara {
+            @include jpColor(#a88cd6);
+            top: 302px;
+            right: 274px;
+        }
+        &.japan-link-wakayama {
+            @include jpColor(#a88cd6);
+            @include jpSize(102, 34);
+            top: 338px;
+            right: 274px;
+        }
+
+        //
+        &.japan-link-yamaguchi {
+            @include jpColor(#d189d4);
+            @include jpSize(50, 70);
+            top: 266px;
+            right: 482px;
+        }
+        &.japan-link-shimane {
+            @include jpColor(#d189d4);
+            top: 266px;
+            right: 430px;
+        }
+        &.japan-link-tottori {
+            @include jpColor(#d189d4);
+            top: 266px;
+            right: 378px;
+        }
+        &.japan-link-hiroshima {
+            @include jpColor(#d189d4);
+            top: 302px;
+            right: 430px;
+        }
+        &.japan-link-okayama {
+            @include jpColor(#d189d4);
+            top: 302px;
+            right: 378px;
+        }
+
+        //
+        &.japan-link-ehime {
+            @include jpColor(#eb8399);
+            top: 342px;
+            right: 434px;
+        }
+        &.japan-link-kagawa {
+            @include jpColor(#eb8399);
+            top: 342px;
+            right: 382px;
+        }
+        &.japan-link-kochi {
+            @include jpColor(#eb8399);
+            top: 378px;
+            right: 434px;
+        }
+        &.japan-link-tokushima {
+            @include jpColor(#eb8399);
+            top: 378px;
+            right: 382px;
+        }
+
+        //
+        &.japan-link-nagasaki {
+            @include jpColor(#ed9471);
+            top: 266px;
+            right: 642px;
+        }
+        &.japan-link-saga {
+            @include jpColor(#ed9471);
+            top: 266px;
+            right: 590px;
+        }
+        &.japan-link-fukuoka {
+            @include jpColor(#ed9471);
+            top: 266px;
+            right: 538px;
+        }
+        &.japan-link-kumamoto {
+            @include jpColor(#ed9471);
+            @include jpSize(50, 70);
+            top: 302px;
+            right: 590px;
+        }
+        &.japan-link-oita {
+            @include jpColor(#ed9471);
+            top: 302px;
+            right: 538px;
+        }
+        &.japan-link-miyazaki {
+            @include jpColor(#ed9471);
+            top: 338px;
+            right: 538px;
+        }
+        &.japan-link-kagoshima {
+            @include jpColor(#ed9471);
+            @include jpSize(102, 34);
+            top: 374px;
+            right: 538px;
+        }
+
+        //
+        &.japan-link-okinawa {
+            top: 18px;
+            left: 0;
+            background-color: #dfac32;
+            &:hover {
+                background-color: #ee9021;
+            }
+        }
+    }
+    .japan-okinawa {
+        width: 120px;
+        height: 122px;
+        background: url(#{$path-image}bg-okinawa.png) no-repeat;
+        background-size: 120px 122px;
+        position: absolute;
+        left: 0;
+        top: 96px;
+    }
+}

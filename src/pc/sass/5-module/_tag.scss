@@ -1,0 +1,32 @@
+.tag {
+    display: inline-block;
+    background-color: $color-border-light;
+    padding: 8px 5px 7px 11px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: background-color $duration $easing;
+    > span {
+        vertical-align: middle;
+        position: relative;
+        top: 1px;
+    }
+    .icon-arrow-right {
+        vertical-align: middle;
+        font-size: 17px;
+    }
+    &:hover {
+        text-decoration: none;
+        background-color: darken($color-border-light,20%);
+    }
+
+    //黒背景
+    &.tag-primary {
+        color: #fff;
+        background-color: #000;
+        &:hover {
+            text-decoration: none;
+            background-color: lighten(#000,30%);
+        }
+    }
+}

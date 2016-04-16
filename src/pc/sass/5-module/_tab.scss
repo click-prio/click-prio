@@ -1,0 +1,36 @@
+.tab {
+    //menu
+
+    .tab-menu {
+        margin-bottom: 25px;
+    }
+
+    .tab-menu-list {
+        font-size: 0;
+        margin: -5px;
+    }
+
+    .tab-menu-item {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .tab-menu-link {
+        display: block;
+        font-size: 14px;
+        background-color: $color-border-light;
+        padding: 8px 19px;
+        color: $color-default;
+        transition: background-color $duration $easing, color $duration $easing;
+
+        &:hover,
+        &.is-active {
+            text-decoration: none;
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+    //contents
+    //.tab-contents {}
+}

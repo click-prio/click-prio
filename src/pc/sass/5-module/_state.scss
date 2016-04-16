@@ -1,0 +1,187 @@
+.state {
+    background-color: #fff;
+
+    .primary-heading {
+        margin-bottom: 30px;
+    }
+
+    //table
+    .state-table {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .state-table-th,
+    .state-table-td {
+        text-align: left;
+        letter-spacing: -.02em;
+        line-height: 1.5;
+        padding: 14px 0 14px 0px;
+        vertical-align: middle;
+    }
+
+    .state-table-th {
+        background-color: $color-foundation;
+        font-weight: bold;
+
+        &.state-table-th1 {
+            width: 348px;
+            padding-left: 20px;
+        }
+
+        &.state-table-th2 {
+            width: 189px;
+        }
+
+        &.state-table-th3 {
+            width: 297px;
+        }
+
+        &.state-table-th4 {
+            width: 128px;
+        }
+
+        &.state-table-th5 {
+            width: 118px;
+        }
+    }
+
+    .state-table-td {
+        border-bottom: 1px solid $color-foundation;
+        padding-right: 10px;
+
+        &.state-table-td1 {
+            width: 348px;
+            padding-left: 20px;
+        }
+
+        &.state-table-td2 {
+            width: 189px;
+        }
+
+        &.state-table-td3 {
+            width: 297px;
+        }
+
+        &.state-table-td4 {
+            width: 128px;
+        }
+
+        &.state-table-td5 {
+            width: 118px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            border-bottom: 1px solid $color-main;
+            width: 100%;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            opacity: 1;
+            transition: opacity $duration-quick $easing;
+            backface-visibility: hidden;
+        }
+        &:hover {
+            text-decoration: none;
+            &:before {
+                opacity: 0;
+            }
+        }
+    }
+
+    //links
+    .state-links {
+        letter-spacing: -.02em;
+        @extend %u-clear;
+        padding: 50px 0;
+    }
+
+    .state-links-title {
+        width: 355px;
+        float: left;
+        > a {
+            > span {
+                text-decoration: none;
+                position: relative;
+                left: -2px;
+                top: -1px;
+            }
+            &:hover > span {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .state-links-data {
+        float: left;
+        padding: 0 10px;
+        > span {
+            color: $color-gray;
+        }
+    }
+
+    //banner
+    .states-banners {
+        margin: -5px;
+    }
+    .states-banners-item {
+        display: inline-block;
+        padding: 5px;
+        > a {
+            display: block;
+            border: 1px solid $color-border;
+            background-color: #000;
+            text-decoration: none;
+            &:before {
+                display: none;
+            }
+            &:hover {
+                text-decoration: none;
+                img {
+                    opacity: $opacity;
+                }
+            }
+        }
+        img {
+            transition: opacity $duration $easing;
+        }
+    }
+
+    .state-title {
+        > a {
+            display: block;
+            background-color: #fff;
+            color: $color-default;
+            padding: 16px 15px 16px 38px;
+            position: relative;
+            transition: background-color $duration $easing, color $duration $easing;
+
+            //state
+            &.is-active {
+                background-color: #fff;
+                color: $color-main;
+                .icon-arrow-right {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .icon-arrow-right {
+        transition: transform $duration $easing;
+        position: absolute;
+        left: 15px;
+        top: 16px;
+    }
+    .state-data {
+        display: none;
+        border-top: $color-border 1px solid;
+    }
+}
