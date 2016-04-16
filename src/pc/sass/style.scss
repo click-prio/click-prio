@@ -167,3 +167,38 @@ main {
         float: left;
     }
 }
+
+
+.step {
+    text-align: center;
+    .step__image {
+        padding: 20px;
+    }
+    .step__icon {
+        font-size: 150px;
+        width: 280px;
+        height: 280px;
+        line-height: 280px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+    .step__caption {
+        display: table;
+        width: 100%;
+        margin-bottom: 15px;
+        > p {
+            display: table-cell;
+            color: #7cbabf;
+            text-align: center;
+            vertical-align: middle;
+            height: 3em * 1.5;
+            font-size: 25px;
+            line-height: 1.5;
+        }
+    }
+    .step__num {
+        color: #fff;
+        font-size: 50px;
+        font-weight: bold;
+    }
+}

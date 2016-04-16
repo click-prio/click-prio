@@ -66,10 +66,13 @@
 }
 
 .works {
+    padding: 20px;
+    background-color: #293344;
     .works__title {
-        font-size: 20px;
+        text-align: center;
+        font-size: 35px;
         color: #fff;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
     .works__grid {
         text-align: center;
@@ -79,15 +82,102 @@
     }
     .works__grid-item {
         padding: 15px;
-        img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 5px;
+    }
+}
+
+.start {
+    background: url(#{$path-image}bg-start.png) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 20px 0;
+    .start__title {
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    //.start__button {}
+}
+
+.get-start {
+    display: inline-block;
+    border-radius: 30px;
+    background-color: rgba(#fff, .1);
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #fff;
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 150%;
+        background-color: rgba(#fff, .1);
+        position: absolute;
+        z-index: 1;
+        top: -25%;
+        left: -25%;
+        transform: rotate(30deg);
+        transition: left .5s ease-in-out;
+    }
+    .get-start__icon,
+    .get-start__text {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        z-index: 2;
+    }
+    .get-start__icon {
+        font-size: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    .get-start__text {
+        font-size: 40px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        &:before {
+            transform: rotate(30deg);
+            left: 200%;
         }
-        p {
-            text-align: center;
-            font-size: 20px;
-            color: #fff;
-        }
+    }
+}
+
+.feature {
+    background: url(#{$path-image}bg-feature.jpg) center center no-repeat;
+    padding: 30px 0;
+    .feature__title {
+        color: #fff;
+        font-size: 100px;
+        text-align: center;
+        margin-bottom: 110px;
+    }
+    .feature__grid {
+    }
+    .feature__grid-inner {
+        margin: -30px 0;
+    }
+    .feature__grid-item {
+        padding: 30px;
+    }
+    .feature__strong {
+        text-align: center;
+        margin-top: 200px;
+        font-size: 45px;
+        color: #fff;
+    }
+}
+
+.reason {
+    text-align: center;
+    .reason__icon {
+        font-size: 100px;
+        margin-bottom: 10px;
+    }
+    .reason__title {
+        font-size: 45px;
+        color: #fff;
     }
 }

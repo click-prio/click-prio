@@ -9,6 +9,7 @@ $break-large: 1024px;
 		letter-spacing: 0;
 	}
 	.grid__item {
+        vertical-align: top;
 		display: inline-block;
 		font-size: $base-font-size; 
 	}
