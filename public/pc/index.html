@@ -81,32 +81,32 @@
     </ul>
 </header>
 
-    <div class="hero">
-        <div class="hero__logo logo">
-            <img class="logo__image" src="images/logo.png" alt="Click Prio"/>
-            <h1 class="logo__title">hassle-free priority<br> number system</h1>
-        </div>
-
-        <article class="hero__caution caution">
-            <h1 class="caution__title">ACTIVE PRIORITY NUMBER</h1>
-            <div class="caution__inner">
-                <p class="caution__number">
-                    <strong>07</strong>
-                </p>
-                <ul class="caution__data">
-                    <li class="caution__data-item">Marvel Hospital</li>
-                    <li class="caution__data-item">Dr. Strange</li>
-                    <li class="caution__data-item">General Physician</li>
-                    <li class="caution__data-item">Now Serving: <em>05</em></li>
-                </ul>
-            </div>
-        </article>
+<div class="hero js-section">
+    <div class="hero__logo logo">
+        <img class="logo__image" src="images/logo.png" alt="Click Prio"/>
+        <h1 class="logo__title">hassle-free priority<br> number system</h1>
     </div>
+
+    <article class="hero__caution caution">
+        <h1 class="caution__title">ACTIVE PRIORITY NUMBER</h1>
+        <div class="caution__inner">
+            <p class="caution__number">
+                <strong>07</strong>
+            </p>
+            <ul class="caution__data">
+                <li class="caution__data-item">Marvel Hospital</li>
+                <li class="caution__data-item">Dr. Strange</li>
+                <li class="caution__data-item">General Physician</li>
+                <li class="caution__data-item">Now Serving: <em>05</em></li>
+            </ul>
+        </div>
+    </article>
+</div>
 
 <!--l-main ここから-->
 <main class="l-main" id="js-base" ng-controller="MyController">
 
-    <section class="start">
+    <section class="start js-section">
         <h1 class="start__title">NO MORE WAITING</h1>
         <a class="start__button get-start" href="app.html">
             <i class="get-start__icon fa fa-hand-o-up"></i>
@@ -114,7 +114,7 @@
         </a>
     </section>
 
-    <section class="supporter">
+    <section class="supporter js-section">
         <h1 class="supporter__title">PEOPLE WHO LOVE US </h1>
         <div class="supporter__grid grid grid--md-col2">
             <ul class="supporter__grid-inner grid__inner">
@@ -136,7 +136,7 @@
         </div>
     </section>
 
-    <section class="works">
+    <section class="works js-section">
         <h1 class="works__title">How it works</h1>
         <div class="works__grid grid grid--col3 grid--md-col1">
             <ol class="works__grid-inner grid__inner">
@@ -186,7 +186,7 @@
         </div>
     </section>
 
-    <section class="feature">
+    <section class="feature js-section">
         <h1 class="feature__title">Why clickPriO</h1>
         <div class="feature__grid grid grid--col3 grid--md-col1">
             <ol class="feature__grid-inner grid__inner">
@@ -224,5 +224,9 @@
         <script src="./lib/angular.min.js"></script>
         <script src="./js/vendor.js"></script>
         <script src="./js/app.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+        <script src="./js/scrollAnimation.js"></script>
+        
     </body>
 </html>
