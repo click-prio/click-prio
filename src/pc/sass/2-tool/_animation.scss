@@ -1,0 +1,18 @@
+@keyframes material {
+    0% {
+        opacity: .3;
+        transform: scale(0);
+    }
+    35% {
+        opacity: .6;
+        transform: scale(15);
+    }
+//    50% {
+//
+//
+//    }
+    100% {
+        opacity: 0;
+        transform: scale(15);
+    }
+}
