@@ -13,10 +13,10 @@
     <!--viewport widthの値は、サイトの横幅 or device-width　を設定-->
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:title" content="Click Prio">
     <meta property="og:description" content="sample text,sample text">
-    <meta property="og:url" content="http://pakoma.com/">
-    <meta property="og:site_name" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Click Prio">
     <meta property="og:type" content="blog">
     <meta property="fb:admins" content="">
     <meta property="og:image" content="images/common/ogp.png">
@@ -27,10 +27,7 @@
     <link rel="apple-touch-icon-precomposed" href="images/common/apple-touch-icon-precomposed.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!--初めに読み込ませたいjs ここから-->
     <script src="./lib/modernizr.js"></script>
-    <!--初めに読み込ませたいjs ここまで-->
 </head>
 <body id="js-body" ng-app="myApp">
 <div id="fb-root"></div>
@@ -81,28 +78,6 @@
 </header>
 
 <!--l-main ここから-->
-<<<<<<< HEAD
-<main class="l-main" id="js-base">
-    <!--<form class="form" action="">-->
-    <!--<dl>-->
-        <!--<dt>Select your specialist</dt>-->
-        <!--<dd>-->
-            <!--<div class="button-group" ng-controller="myController as myCtrl">-->
-                <!--<input class="input" ng-model="searchText" />-->
-                <!--<ul ng-repeat="item in myCtrl.items | filter:searchText">-->
-                    <!--<li>-->
-                        <!--<button class="button" value="{{item.name}}">{{item.name}}</button>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</dd>-->
-    <!--</dl>-->
-    <!--<div>-->
-        <!--<button class="button">Reserve</button>-->
-    <!--</div>-->
-<!--</form>-->
-<input type="text" class="text-input" placeholder="text" value="">
-=======
 
 <main class="l-main" ng-controller="myController as myCtrl">
 	<form class="form" name="form" id="js-form" action="#" novalidate>
@@ -199,16 +174,16 @@
             </li>
     	</ul>
     </form>
->>>>>>> v5
 </main>
 <!--l-main ここまで-->
 
 
         </div>
         <!--wrapper ここまで-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
         <script src="./lib/angular.min.js"></script>
         <script src="./js/vendor.js"></script>
         <script src="./js/app.js"></script>
-        
+        <script src="./js/scrollAnimation.js"></script>
     </body>
 </html>
