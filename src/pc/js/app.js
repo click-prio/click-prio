@@ -1,21 +1,59 @@
 
 var app = angular.module("myApp", []);
 
-var USER_DATA = {};
-
 app.controller("myController", function () {
 
-    var count = 0;
-    var slider = document.getElementById('js-form-slider').getElementsByClassName('form__inner')[0];
+    //var count = 0;
+    //var slider = document.getElementById('js-form-slider').getElementsByClassName('form__inner')[0];
 
-    this.moveSlide = function(){
-        count += 1;
-        slider.style.webkitTransform = 'translate3d(' + -count * window.innerWidth + 'px, 0,0';
+    //this.moveSlide = function(){
+    //    count += 1;
+    //    slider.style.webkitTransform = 'translate3d(' + -count * window.innerWidth + 'px, 0,0';
+    //};
+
+    //this.selectDr = function(e){
+    //    USER_DATA.dr = e.target.value;
+    //    this.moveSlide();
+    //};
+    this.ajaxPost = function (apiUrl, sendData) {
+        return $http({
+            method: 'POST',
+            url: apiUrl,
+            data: $.param(sendData),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            transformRequest: null
+        })
+            .then(function success(res){
+                console.log(res.data);
+                window.location.href = './';
+            }, function error(res){
+                console.log(res.data);
+            });
     };
 
-    this.selectDr = function(e){
-        USER_DATA.dr = e.target.value;
-        this.moveSlide();
+    this.submit = function($event, specialtiy, checkedSp, concerns, someone, patientName){
+        $event.preventDefault();
+
+        //if button is disable, cancel the click event
+        if(
+            $($event.target).parent().attr('disabled') === 'disabled' ||
+            $($event.target).attr('disabled') === 'disabled'
+        ){
+            return;
+        }
+
+        var data = {
+            doctor: checkedSp,
+            specialtiy: specialtiy,
+            concerns: concerns,
+            behalfOfSomeone: someone,
+            patientName: patientName
+        };
+        console.log(data);
+
+        this.ajaxPost('#', data);
     };
 
     this.doctors = [
@@ -37,7 +75,7 @@ app.controller("myController", function () {
             "value": ""
         }, {
             "name": "Psychiatry",
-            "value": "specialty-0"
+            "value": "psychiatry"
         }, {
             "name": "Pediatrics",
             "value": "specialty-1"
@@ -85,16 +123,6 @@ app.controller("myController", function () {
             "value": "specialty-15"
         }
     ];
-
-
-    //function clickHandler(self){
-    //    console.log($(self).val());
-    //}
-    //
-    //$('.js-data-button').on('click submit', function(e){
-    //    e.preventDefault();
-    //    clickHandler(this);
-    //});
 });
 
 require('./module/hack.js');

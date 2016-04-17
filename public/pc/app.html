@@ -84,7 +84,7 @@
 <!--l-main ここから-->
 
 <main class="l-main" ng-controller="myController as myCtrl">
-	<form class="form" name="form" id="js-form-slider" action="#" novalidate>
+	<form class="form" name="form" id="js-form" action="#" novalidate>
         
 		<ul class="form__inner">
     		<li class="form__item">
@@ -128,7 +128,7 @@
     <div class="selection__select check-element animate-show" ng-show="checkedSp === 'specialist'">
         <div class="select">
             <i class="select__icon fa fa-angle-down"></i>
-            <select class="select__object">
+            <select class="select__object" ng-model="specialtiy">
                 <option ng-repeat="specialtiy in myCtrl.specialties" value="{{specialtiy.value}}">{{specialtiy.name}}</option>
             </select>
         </div>
@@ -146,11 +146,11 @@
                     <div class="selection selection--concerns">
     <ul class="selection__list">
         <li class="selection__item">
-            <textarea class="textarea" name="" id="" cols="20" rows="5" placeholder="Concerns"></textarea>
+            <textarea class="textarea" name="" id="" cols="20" rows="5" placeholder="Concerns" ng-model="concerns"></textarea>
         </li>
         <li class="selection__item">
             <label class="dot dot--box">
-                <input class="dot__input" type="checkbox" name="doctor" value="else">
+                <input class="dot__input" type="checkbox" name="someone" value="someone" ng-model="someone">
                 <span class="dot__box">
                     <i class="dot__icon fa fa-check"></i>
                 </span>
@@ -158,7 +158,7 @@
             </label>
         </li>
         <li class="selection__item">
-            <input class="input" type="text" placeholder="Patient’s Name" ng-model="patientName" ng-required>
+            <input class="input" type="text" name="patientName" placeholder="Patient’s Name" ng-model="patientName" ng-required>
         </li>
     </ul>
 </div>  
@@ -170,7 +170,7 @@
                 </div>
                 <div class="form__cell">
                     <div class="selection selection--button">
-    <a class="selection__button get-start get-start--primary" href="app.html" ng-disabled="!patientName || !checkedSp">
+    <a class="selection__button get-start get-start--primary" href="" ng-disabled="!patientName || !checkedSp" ng-click="myCtrl.submit($event, specialtiy, checkedSp, concerns, someone, patientName)">
         <span class="get-start__text">Get your number</span>
     </a>
 </div>  

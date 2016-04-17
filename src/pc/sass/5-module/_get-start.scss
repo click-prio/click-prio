@@ -23,6 +23,8 @@
         margin-top: -15px;
         transform: scale(0);
         opacity: 0;
+        perspective: 1px;
+        backface-visibility: hidden;
     }
     .get-start__icon,
     .get-start__text {

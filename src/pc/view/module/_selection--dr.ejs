@@ -36,7 +36,7 @@
     <div class="selection__select check-element animate-show" ng-show="checkedSp === 'specialist'">
         <div class="select">
             <i class="select__icon fa fa-angle-down"></i>
-            <select class="select__object">
+            <select class="select__object" ng-model="specialtiy">
                 <option ng-repeat="specialtiy in myCtrl.specialties" value="{{specialtiy.value}}">{{specialtiy.name}}</option>
             </select>
         </div>

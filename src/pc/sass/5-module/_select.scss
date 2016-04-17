@@ -3,14 +3,17 @@
     position: relative;
     cursor: pointer;
     display: inline-block;
+    overflow: hidden;
     .select__object {
         display: block;
-        width: 100%;
+        vertical-align: baseline;
+        width: 110%;
         min-height: 45px;
-        padding: 0 10px;
+        padding: 10px;
         color: #666;
         background-color: #fff;
-        font-size: 25px;
+        font-size: 23px;
+        line-height: 1;
     }
     .select__icon {
         color: #9a9a9a;
