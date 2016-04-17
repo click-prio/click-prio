@@ -1,3 +1,33 @@
+@keyframes count {
+    0% {
+        content: "00";
+    }
+    10% {
+        content: "01";
+    }
+    20% {
+        content: "02";
+    }
+    30% {
+        content: "03";
+    }
+    40% {
+        content: "04";
+    }
+    50% {
+        content: "05";
+    }
+    60% {
+        content: "06";
+    }
+    70% {
+        content: "07";
+    }
+    100% {
+        content: "07";
+    }
+}
+
 @keyframes material {
     0% {
         opacity: .3;
