@@ -77,11 +77,6 @@
 </header>
 
 <div class="hero js-section">
-    <div class="hero__logo logo">
-        <img class="logo__image" src="images/logo.png" alt="Click Prio"/>
-        <h1 class="logo__title">hassle-free priority<br> number system</h1>
-    </div>
-{{myCtrl.checkCookie}}
     <article class="hero__caution caution" ng-show="myCtrl.checkCookie() === true">
         <h1 class="caution__title">ACTIVE PRIORITY NUMBER</h1>
         <div class="caution__inner">
@@ -96,6 +91,10 @@
             </ul>
         </div>
     </article>
+    <div class="hero__logo logo">
+        <img class="logo__image" src="images/logo.png" alt="Click Prio"/>
+        <h1 class="logo__title">hassle-free priority<br> number system</h1>
+    </div>
 </div>
 
 <!--l-main ここから-->
