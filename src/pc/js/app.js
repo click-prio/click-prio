@@ -140,3 +140,4 @@ app.controller("myController", function () {
 require('./module/hack.js');
 require('./module/smooth-scroll.js');
 require('./module/data.js');
+require('./module/loading.js');
