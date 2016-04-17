@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9" prefix="og: http://ogp.me/ns#"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" ng-app="myApp"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#" ng-app="myApp"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" prefix="og: http://ogp.me/ns#" ng-app="myApp"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" ng-app="myApp"><!--<![endif]-->
 <head>
     <meta charset="UTF-8">
     <title>Click Prio</title>
@@ -13,26 +13,22 @@
     <!--viewport widthの値は、サイトの横幅 or device-width　を設定-->
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:title" content="Click Prio">
     <meta property="og:description" content="sample text,sample text">
-    <meta property="og:url" content="http://pakoma.com/">
-    <meta property="og:site_name" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Click Prio">
     <meta property="og:type" content="blog">
     <meta property="fb:admins" content="">
     <meta property="og:image" content="images/common/ogp.png">
 
-    <meta name="apple-mobile-web-app-title" content="Pacoma">
+    <meta name="apple-mobile-web-app-title" content="Clip Prio">
 
     <link rel="shortcut icon" href="images/common/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="images/common/apple-touch-icon-precomposed.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!--初めに読み込ませたいjs ここから-->
     <script src="./lib/modernizr.js"></script>
-    <!--初めに読み込ませたいjs ここまで-->
 </head>
-<body id="js-body" ng-app="myApp">
+<body id="js-body" ng-controller="myController as myCtrl">
 <div id="fb-root"></div>
 
 <!--
@@ -81,28 +77,6 @@
 </header>
 
 <!--l-main ここから-->
-<<<<<<< HEAD
-<main class="l-main" id="js-base">
-    <!--<form class="form" action="">-->
-    <!--<dl>-->
-        <!--<dt>Select your specialist</dt>-->
-        <!--<dd>-->
-            <!--<div class="button-group" ng-controller="myController as myCtrl">-->
-                <!--<input class="input" ng-model="searchText" />-->
-                <!--<ul ng-repeat="item in myCtrl.items | filter:searchText">-->
-                    <!--<li>-->
-                        <!--<button class="button" value="{{item.name}}">{{item.name}}</button>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</dd>-->
-    <!--</dl>-->
-    <!--<div>-->
-        <!--<button class="button">Reserve</button>-->
-    <!--</div>-->
-<!--</form>-->
-<input type="text" class="text-input" placeholder="text" value="">
-=======
 
 <main class="l-main" ng-controller="myController as myCtrl">
 	<form class="form" name="form" id="js-form" action="#" novalidate>
@@ -199,16 +173,16 @@
             </li>
     	</ul>
     </form>
->>>>>>> v5
 </main>
 <!--l-main ここまで-->
 
 
         </div>
         <!--wrapper ここまで-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
         <script src="./lib/angular.min.js"></script>
         <script src="./js/vendor.js"></script>
         <script src="./js/app.js"></script>
-        
+        <script src="./js/scrollAnimation.js"></script>
     </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9" prefix="og: http://ogp.me/ns#"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" ng-app="myApp"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#" ng-app="myApp"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" prefix="og: http://ogp.me/ns#" ng-app="myApp"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" ng-app="myApp"><!--<![endif]-->
 <head>
     <meta charset="UTF-8">
     <title>Click Prio</title>
@@ -20,15 +20,14 @@
     <meta property="fb:admins" content="">
     <meta property="og:image" content="images/common/ogp.png">
 
-    <meta name="apple-mobile-web-app-title" content="Pacoma">
+    <meta name="apple-mobile-web-app-title" content="Clip Prio">
 
     <link rel="shortcut icon" href="images/common/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="images/common/apple-touch-icon-precomposed.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="./lib/modernizr.js"></script>
 </head>
-<body id="js-body" ng-app="myApp">
+<body id="js-body" ng-controller="myController as myCtrl">
 <div id="fb-root"></div>
 
 <!--
