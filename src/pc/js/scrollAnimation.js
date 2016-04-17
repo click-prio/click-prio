@@ -17,7 +17,7 @@
 
         scenes[num] = new ScrollMagic.Scene({
             triggerElement: self,
-            triggerHook: 0.5, //onEnter, onLeave, onCenter
+            triggerHook: 0.7, //onEnter, onLeave, onCenter
             tweenChanges: true
         })
             .setClassToggle(self, 'is-active')

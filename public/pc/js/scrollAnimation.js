@@ -1,2 +1,2 @@
-fr([2],[function(e,n){"use strict";!function(){function e(e,n){r[n]=new ScrollMagic.Scene({triggerElement:e,triggerHook:.5,tweenChanges:!0}).setClassToggle(e,"is-active").reverse(!1).addTo(t)}function n(){for(var n=0;c>n;n+=1)e(o[n],n)}var t=new ScrollMagic.Controller,r=[],o=document.getElementsByClassName("js-section"),c=o.length;return 0===c?!1:void n()}()}]);
+fr([2],[function(e,n){"use strict";!function(){function e(e,n){r[n]=new ScrollMagic.Scene({triggerElement:e,triggerHook:.7,tweenChanges:!0}).setClassToggle(e,"is-active").reverse(!1).addTo(t)}function n(){for(var n=0;c>n;n+=1)e(o[n],n)}var t=new ScrollMagic.Controller,r=[],o=document.getElementsByClassName("js-section"),c=o.length;return 0===c?!1:void n()}()}]);
 //# sourceMappingURL=maps/scrollAnimation.map
