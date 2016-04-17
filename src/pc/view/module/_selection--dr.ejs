@@ -1,0 +1,44 @@
+<div class="selection selection--dr">
+    <ul class="selection__avatars">
+        <li class="selection__avatars-item">
+            <dl class="avatar">
+                <dt class="avatar__thumb">
+                    <img src="images/dr-generalist.png" alt="">
+                </dt>
+                <dd class="avatar__name">
+                    <label class="dot">
+                        <input class="dot__input" type="radio" name="doctor" value="general" ng-model="checkedSp" ng-required>
+                        <span class="dot__box">
+                            <i class="dot__icon fa fa-check"></i>
+                        </span>
+                        <span class="dot__text">General Physician</span>
+                    </label>
+                </dd>
+            </dl>
+        </li>
+        <li class="selection__avatars-item">
+            <dl class="avatar">
+                <dt class="avatar__thumb">
+                    <img src="images/dr-specialist.png" alt="">
+                </dt>
+                <dd class="avatar__name">
+                    <label class="dot">
+                        <input class="dot__input" type="radio" name="doctor" value="specialist" ng-model="checkedSp" ng-required>
+                        <span class="dot__box">
+                            <i class="dot__icon fa fa-check"></i>
+                        </span>
+                        <span class="dot__text">Specialist</span>
+                    </label>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+    <div class="selection__select check-element animate-show" ng-show="checkedSp === 'specialist'">
+        <div class="select">
+            <i class="select__icon fa fa-angle-down"></i>
+            <select class="select__object" ng-model="specialtiy">
+                <option ng-repeat="specialtiy in myCtrl.specialties" value="{{specialtiy.value}}">{{specialtiy.name}}</option>
+            </select>
+        </div>
+    </div>
+</div>

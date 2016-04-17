@@ -4,11 +4,13 @@ $break-medium: 780px;
 $break-large: 1024px;
 
 .grid {
+    text-align: center;
 	.grid__inner {
 		font-size: 0;
 		letter-spacing: 0;
 	}
 	.grid__item {
+        vertical-align: top;
 		display: inline-block;
 		font-size: $base-font-size; 
 	}
@@ -73,6 +75,11 @@ $break-large: 1024px;
         &.grid--md-col1 {
             .grid__item {
                 width: 100%;
+            }
+        }
+        &.grid--md-col2 {
+            .grid__item {
+                width: 50%;
             }
         }
     }

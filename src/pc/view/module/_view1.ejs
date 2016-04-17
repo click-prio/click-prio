@@ -1,19 +1,15 @@
-<!--<form class="form" action="">-->
-    <!--<dl>-->
-        <!--<dt>Select your specialist</dt>-->
-        <!--<dd>-->
-            <!--<div class="button-group" ng-controller="myController as myCtrl">-->
-                <!--<input class="input" ng-model="searchText" />-->
-                <!--<ul ng-repeat="item in myCtrl.items | filter:searchText">-->
-                    <!--<li>-->
-                        <!--<button class="button" value="{{item.name}}">{{item.name}}</button>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</dd>-->
-    <!--</dl>-->
-    <!--<div>-->
-        <!--<button class="button">Reserve</button>-->
-    <!--</div>-->
-<!--</form>-->
-<input type="text" class="text-input" placeholder="text" value="">
+<li class="form__item">
+    <dl>
+        <dt>Select your specialist</dt>
+        <dd>
+            <div class="button-group">
+                <input class="button-group__input input" placeholder="Seach doctors" ng-model="searchText" />
+                <ul class="button-group__list">
+                    <li ng-repeat="specialist in myCtrl.specialists | filter:searchText">
+                        <button class="button" type="button" value="{{specialist.name}}" ng-click="myCtrl.selectDr($event)">{{specialist.name}}</button>
+                    </li>
+                </ul>
+            </div>
+        </dd>
+    </dl>
+</li>

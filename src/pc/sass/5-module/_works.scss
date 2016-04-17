@@ -1,0 +1,35 @@
+.works {
+    overflow: hidden;
+    padding: 25px 15px;
+    background-color: #293344;
+    .works__title {
+        font-size: 50px;
+        line-height: 1.35;
+        margin-bottom: 50px;
+        text-align: center;
+        color: #fff;
+    }
+    .works__grid {
+        text-align: center;
+    }
+    .works__grid-inner {
+        margin: -15px;
+    }
+    .works__grid-item {
+        padding: 15px;
+    }
+}
+
+@include query($break-medium) {
+    .works {
+        .works__title {
+            font-size: 25px;
+        }
+        .works__grid-inner {
+            margin: -30px;
+        }
+        .works__grid-item {
+            padding: 30px;
+        }
+    }
+}

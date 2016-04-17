@@ -1,0 +1,21 @@
+.start {
+    background: url(#{$path-image}bg-start.png) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 25px 15px 30px;
+    .start__title {
+        color: #fff;
+        font-size: 50px;
+        line-height: 1.35;
+        margin-bottom: 25px;
+    }
+}
+
+@include query($break-medium) {
+    .start {
+        padding: 25px 15px;
+        .start__title {
+            font-size: 25px;
+        }
+    }
+}

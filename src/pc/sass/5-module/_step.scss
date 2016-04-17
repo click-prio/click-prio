@@ -1,0 +1,62 @@
+.step {
+    text-align: center;
+    .step__image {
+        position: relative;
+        padding-top: 100%;
+    }
+    .step__icon {
+        width: 100%;
+        height: 100%;
+        font-size: 150px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+    .step__caption {
+        display: table;
+        width: 100%;
+        margin-bottom: 15px;
+        > p {
+            display: table-cell;
+            color: #7cbabf;
+            text-align: center;
+            vertical-align: middle;
+            height: 3em * 1.5;
+            font-size: 25px;
+            line-height: 1.5;
+        }
+    }
+    .step__num {
+        color: #fff;
+        font-size: 50px;
+        font-weight: bold;
+    }
+}
+
+@include query($break-medium) {
+    .step {
+        padding: 0 25px;
+        .step__image {
+            margin-bottom: 25px;
+        }
+        .step__icon {
+            font-size: 100px;
+        }
+        .step__caption {
+            > p {
+                font-size: 20px;
+            }
+        }
+        .step__num {
+            font-size: 25px;
+        }
+    }
+}

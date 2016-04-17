@@ -12,10 +12,10 @@
     <!--viewport widthの値は、サイトの横幅 or device-width　を設定-->
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="<%= title %>Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:title" content="<%= title %>Click Prio">
     <meta property="og:description" content="<%= description %>">
-    <meta property="og:url" content="http://pakoma.com/">
-    <meta property="og:site_name" content="Pacoma パコマ ｜ 豊かな暮らしをつくる、ウェブマガジン">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Click Prio">
     <meta property="og:type" content="<%= type %>">
     <meta property="fb:admins" content="">
     <meta property="og:image" content="images/common/ogp.png">
@@ -25,27 +25,8 @@
     <link rel="shortcut icon" href="images/common/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="images/common/apple-touch-icon-precomposed.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <% if(id === "index"){ %>
     <link rel="stylesheet" href="css/style.css">
     <script src="./lib/modernizr.js"></script>
-    <script src="./js/vendor.js"></script>
-    <script src="./js/app.js"></script>
-    <% } else { %>
-    <link rel="stylesheet" href="css/7-library/onsenui/onsen-css-components.css">
-    <link rel="stylesheet" href="css/7-library/onsenui/onsenui.css">
-    <script src="lib/onsenui/js/angular/angular.js"></script>
-    <script src="lib/onsenui/js/onsenui.js"></script>
-    <script>
-        ons.bootstrap();
-        ons.ready(function() {
-            // Add another Onsen UI element
-            var content = document.getElementById("my-content");
-            content.innerHTML="<ons-button>Another Button</ons-button>";
-            ons.compile(content);
-        });
-    </script>
-    <% } %>
 </head>
 <body id="js-body" ng-app="myApp">
 <div id="fb-root"></div>

@@ -26,22 +26,11 @@
     <link rel="shortcut icon" href="images/common/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="images/common/apple-touch-icon-precomposed.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/7-library/onsenui/onsen-css-components.css">
-    <link rel="stylesheet" href="css/7-library/onsenui/onsenui.css">
-    <script src="lib/onsenui/js/angular/angular.js"></script>
-    <script src="lib/onsenui/js/onsenui.js"></script>
-    <script>
-        ons.bootstrap();
-        ons.ready(function() {
-            // Add another Onsen UI element
-            var content = document.getElementById("my-content");
-            content.innerHTML="<ons-button>Another Button</ons-button>";
-            ons.compile(content);
-        });
-    </script>
-    
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--初めに読み込ませたいjs ここから-->
+    <script src="./lib/modernizr.js"></script>
+    <!--初めに読み込ませたいjs ここまで-->
 </head>
 <body id="js-body" ng-app="myApp">
 <div id="fb-root"></div>
@@ -57,7 +46,16 @@
 <input type="hidden" value="./" id="js-base-url">
 <header class="l-header">
 
-    <ul class="nav">
+    <ul class="l-header__main global-nav">
+        <li class="global-nav__item">
+            <a href="">Become a Partner</a>
+        </li>
+        <li class="global-nav__item">
+            <a href="">Contact Us</a>
+        </li>
+    </ul>
+
+    <ul class="l-header__sub nav">
         <li class="nav__item">
             <dl class="user-info">
                 <dt class="user-info__data">
@@ -65,7 +63,7 @@
                     <p class="user-info__phone">+6332398219</p>
                 </dt>
                 <dd class="user-info__thumb">
-                    <img src="http://placekitten.com/62/62" height="62" width="62" alt="">
+                    <!-- <img src="http://placekitten.com/62/62" height="62" width="62" alt=""> -->
                 </dd>
             </dl>
         </li>
@@ -83,6 +81,7 @@
 </header>
 
 <!--l-main ここから-->
+<<<<<<< HEAD
 <main class="l-main" id="js-base">
     <!--<form class="form" action="">-->
     <!--<dl>-->
@@ -103,11 +102,113 @@
     <!--</div>-->
 <!--</form>-->
 <input type="text" class="text-input" placeholder="text" value="">
+=======
+
+<main class="l-main" ng-controller="myController as myCtrl">
+	<form class="form" name="form" id="js-form" action="#" novalidate>
+        
+		<ul class="form__inner">
+    		<li class="form__item">
+                <div class="form__cell"></div>
+                <div class="form__cell">
+                    <div class="selection selection--dr">
+    <ul class="selection__avatars">
+        <li class="selection__avatars-item">
+            <dl class="avatar">
+                <dt class="avatar__thumb">
+                    <img src="images/dr-generalist.png" alt="">
+                </dt>
+                <dd class="avatar__name">
+                    <label class="dot">
+                        <input class="dot__input" type="radio" name="doctor" value="general" ng-model="checkedSp" ng-required>
+                        <span class="dot__box">
+                            <i class="dot__icon fa fa-check"></i>
+                        </span>
+                        <span class="dot__text">General Physician</span>
+                    </label>
+                </dd>
+            </dl>
+        </li>
+        <li class="selection__avatars-item">
+            <dl class="avatar">
+                <dt class="avatar__thumb">
+                    <img src="images/dr-specialist.png" alt="">
+                </dt>
+                <dd class="avatar__name">
+                    <label class="dot">
+                        <input class="dot__input" type="radio" name="doctor" value="specialist" ng-model="checkedSp" ng-required>
+                        <span class="dot__box">
+                            <i class="dot__icon fa fa-check"></i>
+                        </span>
+                        <span class="dot__text">Specialist</span>
+                    </label>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+    <div class="selection__select check-element animate-show" ng-show="checkedSp === 'specialist'">
+        <div class="select">
+            <i class="select__icon fa fa-angle-down"></i>
+            <select class="select__object" ng-model="specialtiy">
+                <option ng-repeat="specialtiy in myCtrl.specialties" value="{{specialtiy.value}}">{{specialtiy.name}}</option>
+            </select>
+        </div>
+    </div>
+</div>      
+                </div>
+            </li>
+            <li class="form__item form__item--type-b">
+                <div class="form__cell">
+                    <p class="form__item--type-b__text">
+                        select notification style:
+                    </p>
+                </div>
+                <div class="form__cell">
+                    <div class="selection selection--concerns">
+    <ul class="selection__list">
+        <li class="selection__item">
+            <textarea class="textarea" name="" id="" cols="20" rows="5" placeholder="Concerns" ng-model="concerns"></textarea>
+        </li>
+        <li class="selection__item">
+            <label class="dot dot--box">
+                <input class="dot__input" type="checkbox" name="someone" value="someone" ng-model="someone">
+                <span class="dot__box">
+                    <i class="dot__icon fa fa-check"></i>
+                </span>
+                <span class="dot__text">I’m filing in behalf of someone else</span>
+            </label>
+        </li>
+        <li class="selection__item">
+            <input class="input" type="text" name="patientName" placeholder="Patient’s Name" ng-model="patientName" ng-required>
+        </li>
+    </ul>
+</div>  
+                </div>
+            </li>
+            <li class="form__item form__item--type-c">
+                <div class="form__cell">
+                    <img src="images/image-app.png" alt="">
+                </div>
+                <div class="form__cell">
+                    <div class="selection selection--button">
+    <a class="selection__button get-start get-start--primary" href="" ng-disabled="!patientName || !checkedSp" ng-click="myCtrl.submit($event, specialtiy, checkedSp, concerns, someone, patientName)">
+        <span class="get-start__text">Get your number</span>
+    </a>
+</div>  
+                </div>
+            </li>
+    	</ul>
+    </form>
+>>>>>>> v5
 </main>
 <!--l-main ここまで-->
 
 
         </div>
         <!--wrapper ここまで-->
+        <script src="./lib/angular.min.js"></script>
+        <script src="./js/vendor.js"></script>
+        <script src="./js/app.js"></script>
+        
     </body>
 </html>

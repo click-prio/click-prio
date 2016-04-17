@@ -30,9 +30,6 @@
     
     <link rel="stylesheet" href="css/style.css">
     <script src="./lib/modernizr.js"></script>
-    <script src="./js/vendor.js"></script>
-    <script src="./js/app.js"></script>
-    
 </head>
 <body id="js-body" ng-app="myApp">
 <div id="fb-root"></div>
@@ -48,7 +45,16 @@
 <input type="hidden" value="./" id="js-base-url">
 <header class="l-header">
 
-    <ul class="nav">
+    <ul class="l-header__main global-nav">
+        <li class="global-nav__item">
+            <a href="">Become a Partner</a>
+        </li>
+        <li class="global-nav__item">
+            <a href="">Contact Us</a>
+        </li>
+    </ul>
+
+    <ul class="l-header__sub nav">
         <li class="nav__item">
             <dl class="user-info">
                 <dt class="user-info__data">
@@ -56,7 +62,7 @@
                     <p class="user-info__phone">+6332398219</p>
                 </dt>
                 <dd class="user-info__thumb">
-                    <img src="http://placekitten.com/62/62" height="62" width="62" alt="">
+                    <!-- <img src="http://placekitten.com/62/62" height="62" width="62" alt=""> -->
                 </dd>
             </dl>
         </li>
@@ -73,18 +79,14 @@
     </ul>
 </header>
 
-    <div class="hero">
-        <div class="hero__inner">
-            <img class="hero__image" src="images/logo.png" alt="Click Prio"/>
-            <h1 class="hero__title">hassle-free priority number system</h1>
-        </div>
+<div class="hero js-section">
+    <div class="hero__logo logo">
+        <img class="logo__image" src="images/logo.png" alt="Click Prio"/>
+        <h1 class="logo__title">hassle-free priority<br> number system</h1>
     </div>
 
-<!--l-main ここから-->
-<main class="l-main" id="js-base" ng-controller="MyController">
-
-    <section class="caution">
-        <h1 class="caution__title">active priority number:</h1>\
+    <article class="hero__caution caution">
+        <h1 class="caution__title">ACTIVE PRIORITY NUMBER</h1>
         <div class="caution__inner">
             <p class="caution__number">
                 <strong>07</strong>
@@ -96,26 +98,119 @@
                 <li class="caution__data-item">Now Serving: <em>05</em></li>
             </ul>
         </div>
+    </article>
+</div>
+
+<!--l-main ここから-->
+<main class="l-main" id="js-base" ng-controller="MyController">
+
+    <section class="start js-section">
+        <h1 class="start__title">NO MORE WAITING</h1>
+        <a class="start__button get-start" href="app.html">
+            <i class="get-start__icon fa fa-hand-o-up"></i>
+            <span class="get-start__text">Get your number</span>
+        </a>
     </section>
 
-    <section class="works">
-        <h1 class="works__title">How it works</h1>
-        <div class="works__grid grid grid--col3 grid--md-col1">
-            <ul class="works__grid-inner grid__inner">
-                <li class="works__grid-item grid__item">
-                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
-                    <p>Step 1</p>
+    <section class="supporter js-section">
+        <h1 class="supporter__title">PEOPLE WHO LOVE US </h1>
+        <div class="supporter__grid grid grid--md-col2">
+            <ul class="supporter__grid-inner grid__inner">
+                <li class="supporter__grid-item grid__item">
+                    <img src="images/logo/logo1.png" alt=""/>
+                    <p>This Hospital</p>
                 </li>
-                <li class="works__grid-item grid__item">
-                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
-                    <p>Step 2</p>
+                <li class="supporter__grid-item grid__item">
+                    <img src="images/logo/logo2.png" alt=""/>
+                    <p>That Hospital</p>
                 </li>
-                <li class="works__grid-item grid__item">
-                    <img src="http://placekitten.com/300/300" height="300" width="300" alt="">
-                    <p>Step 3</p>
+                <li class="supporter__grid-item grid__item">
+                    <img src="images/logo/logo3.png" alt=""/>
+                </li>
+                <li class="supporter__grid-item grid__item">
+                    <img src="images/logo/logo4.png" alt=""/>
                 </li>
             </ul>
         </div>
+    </section>
+
+    <section class="works js-section">
+        <h1 class="works__title">How it works</h1>
+        <div class="works__grid grid grid--col3 grid--md-col1">
+            <ol class="works__grid-inner grid__inner">
+                <li class="works__grid-item grid__item">
+                    <figure class="step">
+                        <div class="step__image">
+                            <i class="step__icon fa fa-laptop"></i>
+                        </div>
+                        <figcaption class="step__caption">
+                            <p>
+                                Sign-in or Sign-up if you<br>
+                                don’t have an account yet
+                            </p>
+                        </figcaption>
+                        <p class="step__num">Step 1</p>
+                    </figure>
+                </li>
+                <li class="works__grid-item grid__item">
+                    <figure class="step">
+                        <div class="step__image">
+                            <i class="step__icon fa fa-building"></i>
+                        </div>
+                        <figcaption class="step__caption">
+                            <p>
+                                Select what type of<br>
+                                priority number and from<br>
+                                what institution
+                            </p>
+                        </figcaption>
+                        <p class="step__num">Step 2</p>
+                    </figure>
+                </li>
+                <li class="works__grid-item grid__item">
+                    <figure class="step">
+                        <div class="step__image">
+                            <i class="step__icon fa fa-user"></i>
+                        </div>
+                        <figcaption class="step__caption">
+                            <p>
+                                Get Priority Number
+                            </p>
+                        </figcaption>
+                        <p class="step__num">Step 3</p>
+                    </figure>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="feature js-section">
+        <h1 class="feature__title">Why clickPriO</h1>
+        <div class="feature__grid grid grid--col3 grid--md-col1">
+            <ol class="feature__grid-inner grid__inner">
+                <li class="feature__grid-item grid__item">
+                    <article class="reason">
+                        <i class="reason__icon fa fa-check"></i>
+                        <p class="reason__title">Hassle Free</p>
+                    </article>
+                </li>
+                <li class="feature__grid-item grid__item">
+                    <article class="reason">
+                        <i class="reason__icon fa fa-check"></i>
+                        <p class="reason__title">Stress Free</p>
+                    </article>
+                </li>
+                <li class="feature__grid-item grid__item">
+                    <article class="reason">
+                        <i class="reason__icon fa fa-check"></i>
+                        <p class="reason__title">Health-Risk Free</p>
+                    </article>
+                </li>
+            </ol>
+        </div>
+        <p class="feature__strong">
+            <em>Build great moments with the people you love.</em>
+        </p>
     </section>
 
 </main>
@@ -124,5 +219,10 @@
 
         </div>
         <!--wrapper ここまで-->
+        <script src="./lib/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+        <script src="./js/vendor.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/scrollAnimation.js"></script>
     </body>
 </html>
