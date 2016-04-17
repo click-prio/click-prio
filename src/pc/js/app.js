@@ -15,23 +15,23 @@ app.controller("myController", function () {
     //    USER_DATA.dr = e.target.value;
     //    this.moveSlide();
     //};
-    this.ajaxPost = function (apiUrl, sendData) {
-        return $http({
-            method: 'POST',
-            url: apiUrl,
-            data: $.param(sendData),
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            transformRequest: null
-        })
-            .then(function success(res){
-                console.log(res.data);
-                window.location.href = './';
-            }, function error(res){
-                console.log(res.data);
-            });
-    };
+    //this.ajaxPost = function (apiUrl, sendData) {
+    //    return $http({
+    //        method: 'POST',
+    //        url: apiUrl,
+    //        data: $.param(sendData),
+    //        headers: {
+    //            'Content-Type': 'application/x-www-form-urlencoded'
+    //        },
+    //        transformRequest: null
+    //    })
+    //        .then(function success(res){
+    //            console.log(res.data);
+    //            window.location.href = './';
+    //        }, function error(res){
+    //            console.log(res.data);
+    //        });
+    //};
 
     this.cookieSave = function (val) {
         $.cookie('getNum', val, {expires: 1});
@@ -63,7 +63,7 @@ app.controller("myController", function () {
 
         //this.ajaxPost('#', data);
 
-        window.location.href = './';
+        window.location.href = './index.html';
 
         this.cookieSave(true);
     };
