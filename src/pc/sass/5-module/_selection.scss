@@ -30,7 +30,8 @@
     }
 }
 
-@include query($break-medium) {
+
+@include query(1052px) {
     .selection {
         .selection__avatars {
             overflow: hidden;

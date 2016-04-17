@@ -33,6 +33,14 @@ app.controller("myController", function () {
             });
     };
 
+    this.cookieSave = function (val) {
+        $.cookie('getNum', val, {expires: 1});
+    };
+
+    this.checkCookie = (function () {
+        return $.cookie('getNum');
+    })();
+
     this.submit = function($event, specialtiy, checkedSp, concerns, someone, patientName){
         $event.preventDefault();
 
@@ -53,7 +61,11 @@ app.controller("myController", function () {
         };
         console.log(data);
 
-        this.ajaxPost('#', data);
+        //this.ajaxPost('#', data);
+
+        window.location.href = './';
+
+        this.cookieSave(true);
     };
 
     this.doctors = [

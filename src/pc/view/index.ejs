@@ -13,8 +13,8 @@ type = "blog";
         <img class="logo__image" src="images/logo.png" alt="Click Prio"/>
         <h1 class="logo__title">hassle-free priority<br> number system</h1>
     </div>
-
-    <article class="hero__caution caution">
+{{myCtrl.checkCookie}}
+    <article class="hero__caution caution" ng-show="myCtrl.checkCookie() === true">
         <h1 class="caution__title">ACTIVE PRIORITY NUMBER</h1>
         <div class="caution__inner">
             <p class="caution__number">
