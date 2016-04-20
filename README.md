@@ -1,4 +1,4 @@
-# frontplate
+# Click Prio
 
 フロントエンド開発の効率を上げるテンプレート
 
